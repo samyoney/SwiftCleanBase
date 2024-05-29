@@ -1,0 +1,36 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+xcuserdata/
+
+# Swift-specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+Pods/
+*.lock
+!Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Compiled Source
+*.rbc
+*.pyc
+*.pyo
+*.dll
+*.exe
+
+# Platforms
+.ipa
+*.app
+*.app.dSYM
+
+# Miscellaneous
+node_modules/
+*.log
+*.swp
