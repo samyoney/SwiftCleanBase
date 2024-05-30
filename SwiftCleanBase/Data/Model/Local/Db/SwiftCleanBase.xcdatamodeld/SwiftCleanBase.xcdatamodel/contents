@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CourseEntity" representedClassName="CourseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="instructor" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="topics" optional="YES" attributeType="String"/>
+        <relationship name="studentEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseEntity" inverseName="studentEntity" inverseEntity="CourseEntity"/>
+    </entity>
+    <entity name="StudentEntity" representedClassName="StudentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="birth" optional="YES" attributeType="String"/>
+        <attribute name="courseId" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES"/>
+        <relationship name="courseEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudentEntity" inverseName="courseEntity" inverseEntity="StudentEntity"/>
+    </entity>
+</model>

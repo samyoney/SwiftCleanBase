@@ -14,6 +14,22 @@
 		DE646BDA2C06FB70005533D0 /* SwiftCleanBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BD92C06FB70005533D0 /* SwiftCleanBaseTests.swift */; };
 		DE646BE42C06FB70005533D0 /* SwiftCleanBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BE32C06FB70005533D0 /* SwiftCleanBaseUITests.swift */; };
 		DE646BE62C06FB70005533D0 /* SwiftCleanBaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BE52C06FB70005533D0 /* SwiftCleanBaseUITestsLaunchTests.swift */; };
+		DEDFB5F62C07164C0063E752 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F22C07164C0063E752 /* loader.json */; };
+		DEDFB5F72C07164C0063E752 /* TextFile.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F32C07164C0063E752 /* TextFile.strings */; };
+		DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6012C0811870063E752 /* CourseEntity.swift */; };
+		DEDFB6042C0816FB0063E752 /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6032C0816FB0063E752 /* StudentEntity.swift */; };
+		DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6082C0821840063E752 /* CourseDto.swift */; };
+		DEDFB60B2C0821CC0063E752 /* StudentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB60A2C0821CC0063E752 /* StudentDto.swift */; };
+		DEDFB60E2C082A6F0063E752 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB60D2C082A6F0063E752 /* SwiftDataManager.swift */; };
+		DEDFB6122C0842E30063E752 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */; };
+		DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6162C0847660063E752 /* RestfulClient.swift */; };
+		DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6182C08479B0063E752 /* RestfulError.swift */; };
+		DEECECAB2C0857BB00CA065F /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECAA2C0857BB00CA065F /* Resolver */; };
+		DEECECB12C0857C800CA065F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECB02C0857C800CA065F /* Lottie */; };
+		DEECECB72C0857E200CA065F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECB62C0857E200CA065F /* Alamofire */; };
+		DEECECC72C08580800CA065F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECC62C08580800CA065F /* RxSwift */; };
+		DEEE5D272C0863FF00A015BE /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE5D262C0863FF00A015BE /* RswiftLibrary */; };
+		DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE5D302C0868EA00A015BE /* RestfulEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,17 @@
 		DE646BDF2C06FB70005533D0 /* SwiftCleanBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCleanBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE646BE32C06FB70005533D0 /* SwiftCleanBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCleanBaseUITests.swift; sourceTree = "<group>"; };
 		DE646BE52C06FB70005533D0 /* SwiftCleanBaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCleanBaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DEDFB5F22C07164C0063E752 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		DEDFB5F32C07164C0063E752 /* TextFile.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TextFile.strings; sourceTree = "<group>"; };
+		DEDFB6012C0811870063E752 /* CourseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEntity.swift; sourceTree = "<group>"; };
+		DEDFB6032C0816FB0063E752 /* StudentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEntity.swift; sourceTree = "<group>"; };
+		DEDFB6082C0821840063E752 /* CourseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDto.swift; sourceTree = "<group>"; };
+		DEDFB60A2C0821CC0063E752 /* StudentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDto.swift; sourceTree = "<group>"; };
+		DEDFB60D2C082A6F0063E752 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		DEDFB6162C0847660063E752 /* RestfulClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestfulClient.swift; sourceTree = "<group>"; };
+		DEDFB6182C08479B0063E752 /* RestfulError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestfulError.swift; sourceTree = "<group>"; };
+		DEEE5D302C0868EA00A015BE /* RestfulEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEEE5D272C0863FF00A015BE /* RswiftLibrary in Frameworks */,
+				DEECECB72C0857E200CA065F /* Alamofire in Frameworks */,
+				DEECECAB2C0857BB00CA065F /* Resolver in Frameworks */,
+				DEECECB12C0857C800CA065F /* Lottie in Frameworks */,
+				DEECECC72C08580800CA065F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +126,12 @@
 		DE646BC72C06FB48005533D0 /* SwiftCleanBase */ = {
 			isa = PBXGroup;
 			children = (
+				DEEE5D332C086BD800A015BE /* Core */,
+				DEDFB5F42C07164C0063E752 /* Resources */,
+				DEDFB5ED2C0711A50063E752 /* App */,
+				DEDFB5EE2C0711B50063E752 /* Data */,
+				DEDFB5EF2C0711C00063E752 /* Presentation */,
 				DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */,
-				DE646BCA2C06FB48005533D0 /* ContentView.swift */,
 				DE646BCC2C06FB6E005533D0 /* Assets.xcassets */,
 				DE646BCE2C06FB6E005533D0 /* Preview Content */,
 			);
@@ -127,6 +163,125 @@
 			path = SwiftCleanBaseUITests;
 			sourceTree = "<group>";
 		};
+		DEDFB5ED2C0711A50063E752 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DEDFB5EE2C0711B50063E752 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB6132C0844B10063E752 /* Reponsitory */,
+				DEDFB6102C0842AC0063E752 /* Local */,
+				DEDFB60F2C0842480063E752 /* Remote */,
+				DEDFB5F92C0717DB0063E752 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DEDFB5EF2C0711C00063E752 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB60C2C0825450063E752 /* Splash */,
+				DE646BCA2C06FB48005533D0 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DEDFB5F02C0711F60063E752 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB6012C0811870063E752 /* CourseEntity.swift */,
+				DEDFB6032C0816FB0063E752 /* StudentEntity.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DEDFB5F42C07164C0063E752 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB5F22C07164C0063E752 /* loader.json */,
+				DEDFB5F32C07164C0063E752 /* TextFile.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DEDFB5F92C0717DB0063E752 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB5F02C0711F60063E752 /* Local */,
+				DEDFB5FC2C0717FA0063E752 /* Remote */,
+				DEDFB5FA2C0717EE0063E752 /* Dto */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEDFB5FA2C0717EE0063E752 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB6082C0821840063E752 /* CourseDto.swift */,
+				DEDFB60A2C0821CC0063E752 /* StudentDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		DEDFB5FC2C0717FA0063E752 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		DEDFB60C2C0825450063E752 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		DEDFB60F2C0842480063E752 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		DEDFB6102C0842AC0063E752 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB60D2C082A6F0063E752 /* SwiftDataManager.swift */,
+				DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DEDFB6132C0844B10063E752 /* Reponsitory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reponsitory;
+			sourceTree = "<group>";
+		};
+		DEEE5D332C086BD800A015BE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DEEE5D342C086BE300A015BE /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DEEE5D342C086BE300A015BE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB6162C0847660063E752 /* RestfulClient.swift */,
+				DEDFB6182C08479B0063E752 /* RestfulError.swift */,
+				DEEE5D302C0868EA00A015BE /* RestfulEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,15 +289,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE646BE92C06FB70005533D0 /* Build configuration list for PBXNativeTarget "SwiftCleanBase" */;
 			buildPhases = (
-				DE646BC12C06FB48005533D0 /* Sources */,
 				DE646BC22C06FB48005533D0 /* Frameworks */,
 				DE646BC32C06FB48005533D0 /* Resources */,
+				DE646BC12C06FB48005533D0 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DEEE5D2C2C08649C00A015BE /* PBXTargetDependency */,
 			);
 			name = SwiftCleanBase;
+			packageProductDependencies = (
+				DEECECAA2C0857BB00CA065F /* Resolver */,
+				DEECECB02C0857C800CA065F /* Lottie */,
+				DEECECB62C0857E200CA065F /* Alamofire */,
+				DEECECC62C08580800CA065F /* RxSwift */,
+				DEEE5D262C0863FF00A015BE /* RswiftLibrary */,
+			);
 			productName = SwiftCleanBase;
 			productReference = DE646BC52C06FB48005533D0 /* SwiftCleanBase.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +378,13 @@
 				Base,
 			);
 			mainGroup = DE646BBC2C06FB48005533D0;
+			packageReferences = (
+				DEDFB5EA2C0710590063E752 /* XCRemoteSwiftPackageReference "Resolver" */,
+				DEDFB5EB2C0710DB0063E752 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				DEDFB6252C0849600063E752 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DEDFB6262C08496A0063E752 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DEEE5D252C0863FF00A015BE /* XCRemoteSwiftPackageReference "R" */,
+			);
 			productRefGroup = DE646BC62C06FB48005533D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +402,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE646BD02C06FB6E005533D0 /* Preview Assets.xcassets in Resources */,
+				DEDFB5F62C07164C0063E752 /* loader.json in Resources */,
+				DEDFB5F72C07164C0063E752 /* TextFile.strings in Resources */,
 				DE646BCD2C06FB6E005533D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +431,15 @@
 			files = (
 				DE646BCB2C06FB48005533D0 /* ContentView.swift in Sources */,
 				DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */,
+				DEDFB6122C0842E30063E752 /* UserDefaultManager.swift in Sources */,
+				DEDFB6042C0816FB0063E752 /* StudentEntity.swift in Sources */,
+				DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */,
+				DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */,
+				DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */,
+				DEDFB60B2C0821CC0063E752 /* StudentDto.swift in Sources */,
+				DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */,
+				DEDFB60E2C082A6F0063E752 /* SwiftDataManager.swift in Sources */,
+				DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +472,10 @@
 			isa = PBXTargetDependency;
 			target = DE646BC42C06FB48005533D0 /* SwiftCleanBase */;
 			targetProxy = DE646BE02C06FB70005533D0 /* PBXContainerItemProxy */;
+		};
+		DEEE5D2C2C08649C00A015BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DEEE5D2B2C08649C00A015BE /* RswiftGenerateInternalResources */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftCleanBase/Preview Content\"";
+				DEVELOPMENT_TEAM = CNU2T5A2AN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -429,6 +615,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftCleanBase/Preview Content\"";
+				DEVELOPMENT_TEAM = CNU2T5A2AN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -457,6 +645,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +771,81 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEDFB5EA2C0710590063E752 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+		DEDFB5EB2C0710DB0063E752 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
+		DEDFB6252C0849600063E752 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		DEDFB6262C08496A0063E752 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		DEEE5D252C0863FF00A015BE /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEECECAA2C0857BB00CA065F /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEDFB5EA2C0710590063E752 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		DEECECB02C0857C800CA065F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEDFB5EB2C0710DB0063E752 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		DEECECB62C0857E200CA065F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEDFB6252C0849600063E752 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DEECECC62C08580800CA065F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEDFB6262C08496A0063E752 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DEEE5D262C0863FF00A015BE /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEEE5D252C0863FF00A015BE /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		DEEE5D2B2C08649C00A015BE /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE646BBD2C06FB48005533D0 /* Project object */;
 }
