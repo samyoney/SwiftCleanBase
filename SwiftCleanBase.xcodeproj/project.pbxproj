@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440501082C0AC0FF00F4616C /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501072C0AC0FF00F4616C /* URLRequest.swift */; };
+		4405010A2C0AC10900F4616C /* RestfulMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501092C0AC10900F4616C /* RestfulMethod.swift */; };
+		4405010D2C0AC1EE00F4616C /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405010C2C0AC1EE00F4616C /* AppModule.swift */; };
+		440501102C0AC30600F4616C /* ResfulLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405010F2C0AC30600F4616C /* ResfulLogger.swift */; };
+		440501612C0AFC3900F4616C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501572C0AFC3900F4616C /* LoginRequest.swift */; };
+		440501622C0AFC3900F4616C /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501582C0AFC3900F4616C /* RegisterRequest.swift */; };
+		440501632C0AFC3900F4616C /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015A2C0AFC3900F4616C /* BaseResponse.swift */; };
+		440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015B2C0AFC3900F4616C /* CourseResponse.swift */; };
+		440501652C0AFC3900F4616C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015C2C0AFC3900F4616C /* LoginResponse.swift */; };
+		440501662C0AFC3900F4616C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015D2C0AFC3900F4616C /* LoginService.swift */; };
+		440501672C0AFC3900F4616C /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015E2C0AFC3900F4616C /* RegisterResponse.swift */; };
+		440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015F2C0AFC3900F4616C /* StudentResponse.swift */; };
+		4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016A2C0AFCA100F4616C /* LoginService.swift */; };
+		4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */; };
+		440501702C0C4EFF00F4616C /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016F2C0C4EFF00F4616C /* Loadable.swift */; };
+		440501722C0C500D00F4616C /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501712C0C500D00F4616C /* CancelBag.swift */; };
 		DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */; };
 		DE646BCB2C06FB48005533D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BCA2C06FB48005533D0 /* ContentView.swift */; };
 		DE646BCD2C06FB6E005533D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE646BCC2C06FB6E005533D0 /* Assets.xcassets */; };
@@ -26,8 +42,6 @@
 		DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6182C08479B0063E752 /* RestfulError.swift */; };
 		DEECECAB2C0857BB00CA065F /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECAA2C0857BB00CA065F /* Resolver */; };
 		DEECECB12C0857C800CA065F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECB02C0857C800CA065F /* Lottie */; };
-		DEECECB72C0857E200CA065F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECB62C0857E200CA065F /* Alamofire */; };
-		DEECECC72C08580800CA065F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEECECC62C08580800CA065F /* RxSwift */; };
 		DEEE5D272C0863FF00A015BE /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = DEEE5D262C0863FF00A015BE /* RswiftLibrary */; };
 		DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE5D302C0868EA00A015BE /* RestfulEndpoint.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +64,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440501072C0AC0FF00F4616C /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLRequest.swift; path = ../../../../SwiftRorty.iOS/SwiftRorty.iOS/core/network_2/URLRequest.swift; sourceTree = "<group>"; };
+		440501092C0AC10900F4616C /* RestfulMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestfulMethod.swift; path = ../../../../SwiftRorty.iOS/SwiftRorty.iOS/core/network_2/RestfulMethod.swift; sourceTree = "<group>"; };
+		4405010C2C0AC1EE00F4616C /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		4405010F2C0AC30600F4616C /* ResfulLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResfulLogger.swift; sourceTree = "<group>"; };
+		440501572C0AFC3900F4616C /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		440501582C0AFC3900F4616C /* RegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		4405015A2C0AFC3900F4616C /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		4405015B2C0AFC3900F4616C /* CourseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseResponse.swift; sourceTree = "<group>"; };
+		4405015C2C0AFC3900F4616C /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		4405015D2C0AFC3900F4616C /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		4405015E2C0AFC3900F4616C /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		4405015F2C0AFC3900F4616C /* StudentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResponse.swift; sourceTree = "<group>"; };
+		4405016A2C0AFCA100F4616C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resful+Extension.swift"; sourceTree = "<group>"; };
+		4405016F2C0C4EFF00F4616C /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		440501712C0C500D00F4616C /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		DE646BC52C06FB48005533D0 /* SwiftCleanBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCleanBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCleanBaseApp.swift; sourceTree = "<group>"; };
 		DE646BCA2C06FB48005533D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,10 +109,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEEE5D272C0863FF00A015BE /* RswiftLibrary in Frameworks */,
-				DEECECB72C0857E200CA065F /* Alamofire in Frameworks */,
 				DEECECAB2C0857BB00CA065F /* Resolver in Frameworks */,
 				DEECECB12C0857C800CA065F /* Lottie in Frameworks */,
-				DEECECC72C08580800CA065F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +131,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4405010B2C0AC1DF00F4616C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4405010C2C0AC1EE00F4616C /* AppModule.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4405010E2C0AC2D000F4616C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				4405010F2C0AC30600F4616C /* ResfulLogger.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		440501592C0AFC3900F4616C /* request */ = {
+			isa = PBXGroup;
+			children = (
+				440501572C0AFC3900F4616C /* LoginRequest.swift */,
+				440501582C0AFC3900F4616C /* RegisterRequest.swift */,
+			);
+			name = request;
+			path = SwiftCleanBase/Data/Model/Remote/request;
+			sourceTree = SOURCE_ROOT;
+		};
+		440501602C0AFC3900F4616C /* response */ = {
+			isa = PBXGroup;
+			children = (
+				4405015A2C0AFC3900F4616C /* BaseResponse.swift */,
+				4405015B2C0AFC3900F4616C /* CourseResponse.swift */,
+				4405015C2C0AFC3900F4616C /* LoginResponse.swift */,
+				4405015D2C0AFC3900F4616C /* LoginService.swift */,
+				4405015E2C0AFC3900F4616C /* RegisterResponse.swift */,
+				4405015F2C0AFC3900F4616C /* StudentResponse.swift */,
+			);
+			name = response;
+			path = SwiftCleanBase/Data/Model/Remote/response;
+			sourceTree = SOURCE_ROOT;
+		};
+		440501692C0AFC8400F4616C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				4405016A2C0AFCA100F4616C /* LoginService.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		4405016E2C0C4EE200F4616C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */,
+				4405016F2C0C4EFF00F4616C /* Loadable.swift */,
+				440501712C0C500D00F4616C /* CancelBag.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		44DD7AE02C09C44E00A7D9C4 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				440501592C0AFC3900F4616C /* request */,
+				440501602C0AFC3900F4616C /* response */,
+			);
+			name = Remote;
+			path = SwiftCleanBase/Data/Remote;
+			sourceTree = SOURCE_ROOT;
+		};
 		DE646BBC2C06FB48005533D0 = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +222,9 @@
 		DE646BC72C06FB48005533D0 /* SwiftCleanBase */ = {
 			isa = PBXGroup;
 			children = (
+				4405010B2C0AC1DF00F4616C /* App */,
 				DEEE5D332C086BD800A015BE /* Core */,
 				DEDFB5F42C07164C0063E752 /* Resources */,
-				DEDFB5ED2C0711A50063E752 /* App */,
 				DEDFB5EE2C0711B50063E752 /* Data */,
 				DEDFB5EF2C0711C00063E752 /* Presentation */,
 				DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */,
@@ -163,19 +259,11 @@
 			path = SwiftCleanBaseUITests;
 			sourceTree = "<group>";
 		};
-		DEDFB5ED2C0711A50063E752 /* App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		DEDFB5EE2C0711B50063E752 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DEDFB6132C0844B10063E752 /* Reponsitory */,
 				DEDFB6102C0842AC0063E752 /* Local */,
-				DEDFB60F2C0842480063E752 /* Remote */,
+				440501692C0AFC8400F4616C /* Remote */,
 				DEDFB5F92C0717DB0063E752 /* Model */,
 			);
 			path = Data;
@@ -184,7 +272,6 @@
 		DEDFB5EF2C0711C00063E752 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DEDFB60C2C0825450063E752 /* Splash */,
 				DE646BCA2C06FB48005533D0 /* ContentView.swift */,
 			);
 			path = Presentation;
@@ -212,7 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				DEDFB5F02C0711F60063E752 /* Local */,
-				DEDFB5FC2C0717FA0063E752 /* Remote */,
+				44DD7AE02C09C44E00A7D9C4 /* Remote */,
 				DEDFB5FA2C0717EE0063E752 /* Dto */,
 			);
 			path = Model;
@@ -227,27 +314,6 @@
 			path = Dto;
 			sourceTree = "<group>";
 		};
-		DEDFB5FC2C0717FA0063E752 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Remote;
-			sourceTree = "<group>";
-		};
-		DEDFB60C2C0825450063E752 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
-		DEDFB60F2C0842480063E752 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Remote;
-			sourceTree = "<group>";
-		};
 		DEDFB6102C0842AC0063E752 /* Local */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,16 +323,10 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
-		DEDFB6132C0844B10063E752 /* Reponsitory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reponsitory;
-			sourceTree = "<group>";
-		};
 		DEEE5D332C086BD800A015BE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4405010E2C0AC2D000F4616C /* Log */,
 				DEEE5D342C086BE300A015BE /* Network */,
 			);
 			path = Core;
@@ -275,9 +335,12 @@
 		DEEE5D342C086BE300A015BE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4405016E2C0C4EE200F4616C /* Utilities */,
 				DEDFB6162C0847660063E752 /* RestfulClient.swift */,
 				DEDFB6182C08479B0063E752 /* RestfulError.swift */,
 				DEEE5D302C0868EA00A015BE /* RestfulEndpoint.swift */,
+				440501092C0AC10900F4616C /* RestfulMethod.swift */,
+				440501072C0AC0FF00F4616C /* URLRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -302,8 +365,6 @@
 			packageProductDependencies = (
 				DEECECAA2C0857BB00CA065F /* Resolver */,
 				DEECECB02C0857C800CA065F /* Lottie */,
-				DEECECB62C0857E200CA065F /* Alamofire */,
-				DEECECC62C08580800CA065F /* RxSwift */,
 				DEEE5D262C0863FF00A015BE /* RswiftLibrary */,
 			);
 			productName = SwiftCleanBase;
@@ -381,8 +442,6 @@
 			packageReferences = (
 				DEDFB5EA2C0710590063E752 /* XCRemoteSwiftPackageReference "Resolver" */,
 				DEDFB5EB2C0710DB0063E752 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				DEDFB6252C0849600063E752 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				DEDFB6262C08496A0063E752 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DEEE5D252C0863FF00A015BE /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = DE646BC62C06FB48005533D0 /* Products */;
@@ -430,16 +489,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE646BCB2C06FB48005533D0 /* ContentView.swift in Sources */,
+				440501672C0AFC3900F4616C /* RegisterResponse.swift in Sources */,
+				4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */,
+				4405010A2C0AC10900F4616C /* RestfulMethod.swift in Sources */,
+				440501102C0AC30600F4616C /* ResfulLogger.swift in Sources */,
+				4405010D2C0AC1EE00F4616C /* AppModule.swift in Sources */,
 				DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */,
 				DEDFB6122C0842E30063E752 /* UserDefaultManager.swift in Sources */,
+				4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */,
 				DEDFB6042C0816FB0063E752 /* StudentEntity.swift in Sources */,
+				440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */,
 				DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */,
 				DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */,
+				440501632C0AFC3900F4616C /* BaseResponse.swift in Sources */,
+				440501082C0AC0FF00F4616C /* URLRequest.swift in Sources */,
 				DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */,
+				440501662C0AFC3900F4616C /* LoginService.swift in Sources */,
+				440501702C0C4EFF00F4616C /* Loadable.swift in Sources */,
 				DEDFB60B2C0821CC0063E752 /* StudentDto.swift in Sources */,
+				440501652C0AFC3900F4616C /* LoginResponse.swift in Sources */,
+				440501622C0AFC3900F4616C /* RegisterRequest.swift in Sources */,
 				DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */,
 				DEDFB60E2C082A6F0063E752 /* SwiftDataManager.swift in Sources */,
+				440501722C0C500D00F4616C /* CancelBag.swift in Sources */,
+				440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */,
 				DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */,
+				440501612C0AFC3900F4616C /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,22 +864,6 @@
 				minimumVersion = 4.4.3;
 			};
 		};
-		DEDFB6252C0849600063E752 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
-		DEDFB6262C08496A0063E752 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.7.1;
-			};
-		};
 		DEEE5D252C0863FF00A015BE /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -825,16 +884,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEDFB5EB2C0710DB0063E752 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		DEECECB62C0857E200CA065F /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEDFB6252C0849600063E752 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		DEECECC62C08580800CA065F /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEDFB6262C08496A0063E752 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 		DEEE5D262C0863FF00A015BE /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;

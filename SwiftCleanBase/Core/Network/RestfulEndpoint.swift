@@ -15,27 +15,41 @@ import Foundation
 #endif
 
 protocol Endpoint {
-    var url: URL { get }
     var path: String { get }
+    var method: RestfulMethod { get }
+    var url: URL { get }
+    
+    var headers: [String : String]? { get }
+
+    func body() throws -> Data?
 }
 
 enum RestfulEndpoint: Endpoint {
-
+    func body() throws -> Data? {
+    }
+    
+    var method: RestfulMethod{
+        switch self {
+        case .login(let request): return .post
+        case .register(let request): return .post
+        }
+    }
+    
+    var headers: [String : String]? {
+        return ["x-api-key": self.path]
+    }
+    
     var url: URL {
         return URL(string: self.path, relativeTo: baseURL)!
     }
     
     var path: String {
         switch self {
-        case .characters(let page): return "character/?page=\(page)"
-        case .character(let id): return "character/\(id)"
-        case .locations: return "location"
-        case .location(let id): return "location/\(id)"
+        case .login(let request): return "character/?page=\(request.username)"
+        case .register(let request): return "character"
         }
     }
     
-    case characters(Int)
-    case character(Int)
-    case locations
-    case location(Int)
+    case login(request: LoginRequest)
+    case register(request: RegisterRequest)
 }
