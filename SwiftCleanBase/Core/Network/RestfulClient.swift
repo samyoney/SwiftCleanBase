@@ -1,66 +1,115 @@
-import RxSwift
-import Alamofire
 import Foundation
+import Combine
+import Reachability
 
 
-protocol RestfulClient {
-    func fetch<T: Codable>(executeApi: @escaping (_ completion: @escaping ((_ data: T?, _ error: Error?) -> Void)) -> Void) -> Single<T>
-    
-    func filterError(_ response: Any?,_ error: Error?) -> RestfulError
+typealias HTTPCode = Int
+typealias HTTPCodes = Range<HTTPCode>
+extension HTTPCodes {
+    static let success = 200 ..< 300
 }
 
+protocol RestfulClient {
+    func fetch<R>(_ endpoint: RestfulEndpoint, using requestBody: R)  -> AnyPublisher<RestfulResponse, RestfulError>
+}
 
-class RestfulClientImpl: RestfulClient {
-    func fetch<T: Codable>(executeApi: @escaping (_ completion: @escaping ((_ data: T?, _ error: Error?) -> Void)) -> Void) -> Single<T> {
-        return Single<T>.create { (observer) -> Disposable in
-            executeApi { response, error in
-                if let reachabilityManager = NetworkReachabilityManager(), !reachabilityManager.isReachable {
-                    
-                    observer(.failure(RestfulError.init(status: .connectionFail, message: R.string.textFile.errorApiMessage())))
+class RestfulClientImpl {
+    private lazy var session = {
+        URLSession(configuration: URLSessionConfiguration.default)
+    }()
+    
+    private lazy var reachability = {
+        try! Reachability()
+    }()
+    
+    func fetch<R>(_ endpoint: RestfulEndpoint, using requestBody: R)
+    -> AnyPublisher<RestfulResponse, RestfulError> where R: Encodable
+    {
+        startRequest(for: endpoint, requestBody: requestBody)
+            .mapError { error -> RestfulError in
+                error as? RestfulError ?? RestfulError.unKnown
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    private func startRequest<R: Encodable>(for endpoint: RestfulEndpoint, requestBody: R? = nil)
+    -> AnyPublisher<RestfulResponse, Error> {
+        var request: URLRequest
+        do {
+            request = try buildRequest(endpoint: endpoint, requestBody: requestBody)
+        } catch {
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        return session.dataTaskPublisher(for: request)
+            .tryMap { (data: Data, response: URLResponse) in
+                assert(!Thread.isMainThread)
+                if self.reachability.connection == .unavailable {
+                    throw RestfulError.connectionFail
                 } else {
-                    if error != nil  {
-                        observer(.failure(self.filterError(response, error)))
-                    } else {
-                        if let response = response {
-                            observer(.success(response))
+                    if let response = response as? HTTPURLResponse {
+                        if HTTPCodes.success.contains(response.statusCode) {
+                            return RestfulResponse(data: data, response: response)
                         } else {
-                            observer(.failure(self.filterError(response, error)))
+                            throw self.filterError(response.statusCode)
                         }
+                    } else {
+                        throw RestfulError.dataError
                     }
                 }
             }
-            return Disposables.create()
+            .eraseToAnyPublisher()
+    }
+    
+    private func buildRequest<R: Encodable>(endpoint: RestfulEndpoint,
+                                            requestBody: R?) throws -> URLRequest {
+        var request = URLRequest(url: endpoint.url, timeoutInterval: 10)
+        request.httpMethod = endpoint.method
+        if let body = requestBody {
+            do {
+                request.httpBody = try JSONEncoder().encode(requestBody)
+            } catch {
+                throw RestfulError.dataError
+            }
+        }
+        return request
+    }
+    
+    struct RestfulResponse {
+        let data: Data
+        let response: HTTPURLResponse
+        
+        func parseJson<T: Decodable>() throws -> T {
+            if data.isEmpty {
+                throw RestfulError.notFound
+            }
+            do {
+                let result = try JSONDecoder().decode(T.self, from: data)
+                return result
+            } catch {
+                throw RestfulError.dataError
+            }
         }
     }
     
-    func filterError(_ response: Any?,_ error: Error?) -> RestfulError {
-        var errorType: ErrorType
-        let messageError = R.string.textFile.errorApiMessage()
-                
-        if error != nil {
-            if let error = error as? RestfulError {
-                return error
-            } else if let err = error as? AFError, let code = err.responseCode {
-                switch code {
-                case 403:
-                    errorType = .forbidden
-                case 404:
-                    errorType = .notFound
-                case 409:
-                    errorType = .conflict
-                case 500:
-                    errorType = .internalServerError
-                default:
-                    errorType = .unKnown
-                }
-            } else if error is DecodingError {
-                errorType = .dataError
-            } else {
+    private func filterError(_ errorCode: Int?) -> RestfulError {
+        var errorType: RestfulError = .unKnown
+        if let code = errorCode {
+            switch code {
+            case 403:
+                errorType = .forbidden
+            case 404:
+                errorType = .notFound
+            case 409:
+                errorType = .conflict
+            case 500:
+                errorType = .internalServerError
+            default:
                 errorType = .unKnown
             }
         } else {
             errorType = .unKnown
         }
-        return RestfulError.init(status: errorType, message: messageError)
+        return errorType
     }
 }

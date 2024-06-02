@@ -1,23 +1,23 @@
 import Foundation
 
-enum ErrorType {
+enum RestfulError: Error {
     case forbidden
     case notFound
     case conflict
     case internalServerError
     case unKnown
     case connectionFail
-    case requestFail
     case dataError
-}
-
-class RestfulError: Error {
-    let status: ErrorType
-    let message: String?
     
-    init(status: ErrorType, message: String?) {
-        self.status = status
-        self.message = message
+    
+    var message: String {
+        switch self {
+        case .unKnown:
+            return "I dont know that error"
+        default:
+            return "Occurred Error"
+        }
     }
+    
 }
 

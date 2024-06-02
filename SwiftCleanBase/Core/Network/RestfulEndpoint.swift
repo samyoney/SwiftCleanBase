@@ -9,33 +9,54 @@ import Foundation
 
 
 #if DEBUG
-    private let baseURL = URL(string: "https://rickandmortyapi.com/api/")
+private let baseURL = URL(string: "https://rickandmortyapi.com/api/")
 #else
-    private let baseURL = URL(string: "https://rickandmortyapi.com/api/")
+private let baseURL = URL(string: "https://rickandmortyapi.com/api/")
 #endif
 
 protocol Endpoint {
+    var method: String { get }
+    
+    var headers: [String : String]? { get }
+    
     var url: URL { get }
-    var path: String { get }
+    
+    func body() throws -> Data?
 }
 
-enum RestfulEndpoint: Endpoint {
-
+enum RestfulEndpoint {
+    func body() throws -> Data? {
+        return nil
+    }
+    
+    var method: String{
+        switch self {
+        case .login: return "POST"
+        case .register: return "POST"
+        case .student: return "GET"
+        case .course: return "GET"
+        }
+    }
+    
+    var headers: [String : String]? {
+        return ["x-api-key": self.path]
+    }
+    
     var url: URL {
         return URL(string: self.path, relativeTo: baseURL)!
     }
     
-    var path: String {
+    private var path: String {
         switch self {
-        case .characters(let page): return "character/?page=\(page)"
-        case .character(let id): return "character/\(id)"
-        case .locations: return "location"
-        case .location(let id): return "location/\(id)"
+        case .login: return "login/"
+        case .register: return "register/"
+        case .student: return "get/student/"
+        case .course: return "get/course/"
         }
     }
     
-    case characters(Int)
-    case character(Int)
-    case locations
-    case location(Int)
+    case login
+    case register
+    case student
+    case course
 }
