@@ -13,30 +13,18 @@ class UserDefaultManager {
         return UserDefaults.standard
     }()
     
-    private let USERNAME_KEY = "USERNAME_KEY"
-    private let PASSWORD_KEY = "PASSWORD_KEY"
-
-    var username: String {
-        get {
-            guard let userID =  self.userDefaults.string(forKey: USERNAME_KEY) else {
-                return String()
-            }
-            return userID
+    func getValue<T>(key: String) -> T? {
+        guard let value = userDefaults.value(forKey: key) else {
+            return nil
         }
-        set {
-            self.userDefaults.set(newValue, forKey: USERNAME_KEY)
+        if let typedValue = value as? T {
+            return typedValue
+        } else {
+            return nil
         }
     }
     
-    var password: String {
-        get {
-            guard let userID =  self.userDefaults.string(forKey: PASSWORD_KEY) else {
-                return String()
-            }
-            return userID
-        }
-        set {
-            self.userDefaults.set(newValue, forKey: PASSWORD_KEY)
-        }
+    func setValue<T>(key: String, value: T) {
+        self.userDefaults.set(value, forKey: key)
     }
 }

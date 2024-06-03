@@ -21,3 +21,7 @@ enum RestfulError: Error {
     
 }
 
+struct Empty: Encodable {
+    
+}
+

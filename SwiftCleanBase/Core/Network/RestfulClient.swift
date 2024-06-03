@@ -9,19 +9,7 @@ extension HTTPCodes {
     static let success = 200 ..< 300
 }
 
-protocol RestfulClient {
-    func fetch<R>(_ endpoint: RestfulEndpoint, using requestBody: R)  -> AnyPublisher<RestfulResponse, RestfulError>
-}
-
-class RestfulClientImpl {
-    private lazy var session = {
-        URLSession(configuration: URLSessionConfiguration.default)
-    }()
-    
-    private lazy var reachability = {
-        try! Reachability()
-    }()
-    
+class RestfulClient {
     func fetch<R>(_ endpoint: RestfulEndpoint, using requestBody: R)
     -> AnyPublisher<RestfulResponse, RestfulError> where R: Encodable
     {
@@ -31,6 +19,15 @@ class RestfulClientImpl {
             }
             .eraseToAnyPublisher()
     }
+
+    private lazy var session = {
+        URLSession(configuration: URLSessionConfiguration.default)
+    }()
+    
+    private lazy var reachability = {
+        try! Reachability()
+    }()
+    
     
     private func startRequest<R: Encodable>(for endpoint: RestfulEndpoint, requestBody: R? = nil)
     -> AnyPublisher<RestfulResponse, Error> {
@@ -65,11 +62,13 @@ class RestfulClientImpl {
                                             requestBody: R?) throws -> URLRequest {
         var request = URLRequest(url: endpoint.url, timeoutInterval: 10)
         request.httpMethod = endpoint.method
-        if let body = requestBody {
-            do {
-                request.httpBody = try JSONEncoder().encode(requestBody)
-            } catch {
-                throw RestfulError.dataError
+        if requestBody! is Empty {
+            if let body = requestBody {
+                do {
+                    request.httpBody = try JSONEncoder().encode(body)
+                } catch {
+                    throw RestfulError.dataError
+                }
             }
         }
         return request

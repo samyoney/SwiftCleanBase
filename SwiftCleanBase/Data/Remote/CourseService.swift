@@ -12,14 +12,14 @@ import Resolver
 import Combine
 
 protocol CourseService {
-    func fetch(param: LoginRequest, _ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) -> AnyCancellable
+    func fetch(_ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) -> AnyCancellable
 }
 
 class CourseServiceImpl: CourseService {
     @Injected private var restfulClient: RestfulClient
     
-    func fetch(param: LoginRequest, _ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) -> AnyCancellable {
-        restfulClient.fetch(RestfulEndpoint.course, using: param)
+    func fetch(_ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) -> AnyCancellable {
+        restfulClient.fetch(RestfulEndpoint.course, using: Empty())
             .observer { flow in
                 completion(flow.map { result in
                     try result.parseJson()

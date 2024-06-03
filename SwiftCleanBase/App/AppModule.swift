@@ -6,36 +6,39 @@
 //
 
 import Foundation
+import Resolver
 
-//extension Resolver: ResolverRegistering {
-//    public static func registerAllServices() {
-//        defaultScope = .graph
-//        registerSingletons()
-//        registerRemote()
-//        registerRepository()
-//        registerDomain()
-//    }
-//    
-//    private static func registerSingletons() {
-//        register { RestClientImpl() as RestClient }.scope(.application)
-//        register { CoreDataManager() }.scope(.application)
-//    }
-//    
-//    private static func registerRemote() {
-//        register { CharacterServiceImpl() as CharacterService }
-//    }
-//    
-//    private static func registerRepository() {
-//        register { CharacterRepository() }
-//        register { FavoriteRepository() }
-//    }
-//    
-//    private static func registerDomain() {
-//        register { GetCharacters() }
-//        register { GetCharacterDetail() }
-//        register { GetFavorites() }
-//        register { UpdateFavorite() }
-//        register { DeleteFavorite() }
-//    }
-//    
-//}
+extension Resolver: ResolverRegistering {
+    public static func registerAllServices() {
+        defaultScope = .graph
+        registerSingletons()
+        registerRemote()
+        registerRepository()
+        registerUseCase()
+    }
+    
+    private static func registerSingletons() {
+        register { RestfulClient()  }.scope(.application)
+        register { SwiftDataManager() }.scope(.application)
+        register { UserDefaultManager() }.scope(.application)
+    }
+    
+    private static func registerRemote() {
+        register { LoginServiceImpl() as LoginService }
+        register { RegisterServiceImpl() as RegisterService }
+        register { StudentServiceImpl() as StudentService }
+        register { CourseServiceImpl() as CourseService }
+        
+    }
+    
+    private static func registerRepository() {
+        register { AccountRepository() }
+        register { CourseRepository() }
+        register { StudentRepository() }
+    }
+    
+    private static func registerUseCase() {
+        // register { CheckLoggedInUseCase() }
+    }
+    
+}

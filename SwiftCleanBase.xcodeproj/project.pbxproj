@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4405010D2C0AC1EE00F4616C /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405010C2C0AC1EE00F4616C /* AppModule.swift */; };
-		440501102C0AC30600F4616C /* ResfulLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405010F2C0AC30600F4616C /* ResfulLogger.swift */; };
 		440501612C0AFC3900F4616C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501572C0AFC3900F4616C /* LoginRequest.swift */; };
 		440501622C0AFC3900F4616C /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440501582C0AFC3900F4616C /* RegisterRequest.swift */; };
 		440501632C0AFC3900F4616C /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015A2C0AFC3900F4616C /* BaseResponse.swift */; };
 		440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015B2C0AFC3900F4616C /* CourseResponse.swift */; };
 		440501652C0AFC3900F4616C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015C2C0AFC3900F4616C /* LoginResponse.swift */; };
-		440501662C0AFC3900F4616C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015D2C0AFC3900F4616C /* LoginService.swift */; };
 		440501672C0AFC3900F4616C /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015E2C0AFC3900F4616C /* RegisterResponse.swift */; };
 		440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015F2C0AFC3900F4616C /* StudentResponse.swift */; };
 		4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016A2C0AFCA100F4616C /* LoginService.swift */; };
@@ -32,6 +30,9 @@
 		DED158A32C0D902B0090FE66 /* RestfulFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED158A22C0D902B0090FE66 /* RestfulFlow.swift */; };
 		DED158A52C0D954E0090FE66 /* StudentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED158A42C0D954E0090FE66 /* StudentService.swift */; };
 		DED158A72C0D95D60090FE66 /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED158A62C0D95D60090FE66 /* CourseService.swift */; };
+		DED158AB2C0D967B0090FE66 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED158AA2C0D967B0090FE66 /* AccountRepository.swift */; };
+		DED158AD2C0D96900090FE66 /* CourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED158AC2C0D96900090FE66 /* CourseRepository.swift */; };
+		DED158AF2C0D969E0090FE66 /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED158AE2C0D969E0090FE66 /* StudentRepository.swift */; };
 		DEDFB5F62C07164C0063E752 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F22C07164C0063E752 /* loader.json */; };
 		DEDFB5F72C07164C0063E752 /* TextFile.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F32C07164C0063E752 /* TextFile.strings */; };
 		DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6012C0811870063E752 /* CourseEntity.swift */; };
@@ -67,13 +68,11 @@
 
 /* Begin PBXFileReference section */
 		4405010C2C0AC1EE00F4616C /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
-		4405010F2C0AC30600F4616C /* ResfulLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResfulLogger.swift; sourceTree = "<group>"; };
 		440501572C0AFC3900F4616C /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		440501582C0AFC3900F4616C /* RegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		4405015A2C0AFC3900F4616C /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		4405015B2C0AFC3900F4616C /* CourseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseResponse.swift; sourceTree = "<group>"; };
 		4405015C2C0AFC3900F4616C /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		4405015D2C0AFC3900F4616C /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		4405015E2C0AFC3900F4616C /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		4405015F2C0AFC3900F4616C /* StudentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResponse.swift; sourceTree = "<group>"; };
 		4405016A2C0AFCA100F4616C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -93,6 +92,9 @@
 		DED158A22C0D902B0090FE66 /* RestfulFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulFlow.swift; sourceTree = "<group>"; };
 		DED158A42C0D954E0090FE66 /* StudentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentService.swift; sourceTree = "<group>"; };
 		DED158A62C0D95D60090FE66 /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
+		DED158AA2C0D967B0090FE66 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		DED158AC2C0D96900090FE66 /* CourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRepository.swift; sourceTree = "<group>"; };
+		DED158AE2C0D969E0090FE66 /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
 		DEDFB5F22C07164C0063E752 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		DEDFB5F32C07164C0063E752 /* TextFile.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TextFile.strings; sourceTree = "<group>"; };
 		DEDFB6012C0811870063E752 /* CourseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEntity.swift; sourceTree = "<group>"; };
@@ -143,14 +145,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		4405010E2C0AC2D000F4616C /* Log */ = {
-			isa = PBXGroup;
-			children = (
-				4405010F2C0AC30600F4616C /* ResfulLogger.swift */,
-			);
-			path = Log;
-			sourceTree = "<group>";
-		};
 		440501592C0AFC3900F4616C /* request */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +161,6 @@
 				4405015A2C0AFC3900F4616C /* BaseResponse.swift */,
 				4405015B2C0AFC3900F4616C /* CourseResponse.swift */,
 				4405015C2C0AFC3900F4616C /* LoginResponse.swift */,
-				4405015D2C0AFC3900F4616C /* LoginService.swift */,
 				4405015E2C0AFC3900F4616C /* RegisterResponse.swift */,
 				4405015F2C0AFC3900F4616C /* StudentResponse.swift */,
 			);
@@ -265,9 +258,28 @@
 			path = SwiftCleanBaseUITests;
 			sourceTree = "<group>";
 		};
+		DEB512702C0DA1A2003B725C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		DED158A92C0D96730090FE66 /* Reponsitory */ = {
+			isa = PBXGroup;
+			children = (
+				DED158AA2C0D967B0090FE66 /* AccountRepository.swift */,
+				DED158AC2C0D96900090FE66 /* CourseRepository.swift */,
+				DED158AE2C0D969E0090FE66 /* StudentRepository.swift */,
+			);
+			path = Reponsitory;
+			sourceTree = "<group>";
+		};
 		DEDFB5EE2C0711B50063E752 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DEB512702C0DA1A2003B725C /* UseCase */,
+				DED158A92C0D96730090FE66 /* Reponsitory */,
 				DEDFB6102C0842AC0063E752 /* Local */,
 				440501692C0AFC8400F4616C /* Remote */,
 				DEDFB5F92C0717DB0063E752 /* Model */,
@@ -332,7 +344,6 @@
 		DEEE5D332C086BD800A015BE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				4405010E2C0AC2D000F4616C /* Log */,
 				DEEE5D342C086BE300A015BE /* Network */,
 			);
 			path = Core;
@@ -498,23 +509,23 @@
 				DE646BCB2C06FB48005533D0 /* ContentView.swift in Sources */,
 				440501672C0AFC3900F4616C /* RegisterResponse.swift in Sources */,
 				4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */,
-				440501102C0AC30600F4616C /* ResfulLogger.swift in Sources */,
 				4405010D2C0AC1EE00F4616C /* AppModule.swift in Sources */,
 				DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */,
 				DEDFB6122C0842E30063E752 /* UserDefaultManager.swift in Sources */,
 				4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */,
 				DEDFB6042C0816FB0063E752 /* StudentEntity.swift in Sources */,
 				440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */,
+				DED158AB2C0D967B0090FE66 /* AccountRepository.swift in Sources */,
 				DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */,
 				DED158A52C0D954E0090FE66 /* StudentService.swift in Sources */,
 				DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */,
 				440501632C0AFC3900F4616C /* BaseResponse.swift in Sources */,
 				DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */,
-				440501662C0AFC3900F4616C /* LoginService.swift in Sources */,
 				DED158A72C0D95D60090FE66 /* CourseService.swift in Sources */,
 				DEDFB60B2C0821CC0063E752 /* StudentDto.swift in Sources */,
 				DED1589F2C0D69320090FE66 /* RestfulResponse.swift in Sources */,
 				440501652C0AFC3900F4616C /* LoginResponse.swift in Sources */,
+				DED158AF2C0D969E0090FE66 /* StudentRepository.swift in Sources */,
 				440501622C0AFC3900F4616C /* RegisterRequest.swift in Sources */,
 				DED158A12C0D87770090FE66 /* RegisterService.swift in Sources */,
 				DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */,
@@ -522,6 +533,7 @@
 				440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */,
 				DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */,
 				440501612C0AFC3900F4616C /* LoginRequest.swift in Sources */,
+				DED158AD2C0D96900090FE66 /* CourseRepository.swift in Sources */,
 				DED158A32C0D902B0090FE66 /* RestfulFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
