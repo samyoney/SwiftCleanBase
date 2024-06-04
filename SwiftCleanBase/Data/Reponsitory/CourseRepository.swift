@@ -16,17 +16,8 @@ class CourseRepository {
     
     private var cancellable: AnyCancellable?
     
-    func fetchCourses(_ failure: @escaping (_ errorMsg: String) -> Void, _ onNext: @escaping (_ res: CourseResponse) -> Void) {
-        cancellable = courseService.fetch { flow in
-            switch flow {
-            case .failure(let errorMsg):
-                failure(errorMsg)
-                break;
-            case .success(let data):
-                onNext(data)
-                break;
-            }
-        }
+    func fetchCourses(_ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) {
+        cancellable = courseService.fetch(completion)
     }
     
     func insertListCourse(courseEntities: [CourseEntity]) async {

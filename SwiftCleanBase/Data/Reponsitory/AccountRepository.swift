@@ -18,14 +18,14 @@ class AccountRepository {
     @Injected private var registerService: RegisterService
     @Injected private var userDefault: UserDefaultManager
     
-    @Injected private var loginCancellable: AnyCancellable?
-    @Injected private var registerCancellable: AnyCancellable?
+    private var loginCancellable: AnyCancellable?
+    private var registerCancellable: AnyCancellable?
     
     func login(username: String, password: String, _ completion: @escaping (RestfulFlow<LoginResponse>) -> Void) {
         loginCancellable = loginService.fetch(param: LoginRequest(username: username, password: password), completion)
     }
     
-    func register(username: String, password: String, courseId: String, name: String, birth: String, _ completion: @escaping (RestfulFlow<LoginResponse>) -> Void) {
+    func register(username: String, password: String, courseId: String, name: String, birth: String, _ completion: @escaping (RestfulFlow<RegisterResponse>) -> Void) {
         registerCancellable = registerService.fetch(param: RegisterRequest(username: username, password: password, courseId: courseId, name: name, birth: birth), completion)
     }
     

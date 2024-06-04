@@ -10,13 +10,13 @@ import Resolver
 import Combine
 
 protocol RegisterService {
-    func fetch(param: RegisterRequest, _ completion: @escaping (RestfulFlow<LoginResponse>) -> Void) -> AnyCancellable
+    func fetch(param: RegisterRequest, _ completion: @escaping (RestfulFlow<RegisterResponse>) -> Void) -> AnyCancellable
 }
 
 class RegisterServiceImpl: RegisterService {
     @Injected private var restfulClient: RestfulClient
     
-    func fetch(param: RegisterRequest, _ completion: @escaping (RestfulFlow<LoginResponse>) -> Void) -> AnyCancellable {
+    func fetch(param: RegisterRequest, _ completion: @escaping (RestfulFlow<RegisterResponse>) -> Void) -> AnyCancellable {
         restfulClient.fetch(RestfulEndpoint.register, using: param)
             .observer { flow in
                 completion(flow.map { result in

@@ -2,7 +2,7 @@
 //  AppModule.swift
 //  SwiftCleanBase
 //
-//  Created by HS-Macbook on 2024/06/01.
+//  Created by グェン・ホン・ソン on 2024/06/01.
 //
 
 import Foundation
@@ -18,7 +18,7 @@ extension Resolver: ResolverRegistering {
     }
     
     private static func registerSingletons() {
-        register { RestfulClient()  }.scope(.application)
+        register { RestfulClient() }.scope(.application)
         register { SwiftDataManager() }.scope(.application)
         register { UserDefaultManager() }.scope(.application)
     }
@@ -28,7 +28,6 @@ extension Resolver: ResolverRegistering {
         register { RegisterServiceImpl() as RegisterService }
         register { StudentServiceImpl() as StudentService }
         register { CourseServiceImpl() as CourseService }
-        
     }
     
     private static func registerRepository() {
@@ -38,7 +37,21 @@ extension Resolver: ResolverRegistering {
     }
     
     private static func registerUseCase() {
-        // register { CheckLoggedInUseCase() }
+        register { FetchLoginUseCase() }
+        register { CheckLoggedInUseCase() }
+        register { FetchAutoLoginUseCase() }
+        register { FetchRegisterUseCase() }
+        register { SaveAccountInfoUseCase() }
+        register { AddStudentIntoCourseUseCase() }
+        register { CheckDataInitializedUseCase() }
+        register { FetchCoursesUseCase() }
+        register { FetchStudentsUseCase() }
+        register { GetCoursesUseCase() }
+        register { GetStudentsByCourseIdUseCase() }
+        register { GetStudentsUseCase() }
+        register { RemoveStudentFromCourseUseCase() }
+        register { SaveCoursesUseCase() }
+        register { SaveStudentsUseCase() }
     }
     
 }

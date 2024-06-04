@@ -14,19 +14,10 @@ class StudentRepository {
     @Injected private var studentService: StudentService
     @Injected private var swiftData: SwiftDataManager
     
-    @Injected private var cancellable: AnyCancellable?
+    private var cancellable: AnyCancellable?
     
-    func fetchStudents(_ failure: @escaping (_ errorMsg: String) -> Void, _ onNext: @escaping (_ res: StudentResponse) -> Void) {
-        cancellable = studentService.fetch { flow in
-            switch flow {
-            case .failure(let errorMsg):
-                failure(errorMsg)
-                break;
-            case .success(let data):
-                onNext(data)
-                break;
-            }
-        }
+    func fetchStudents(_ completion: @escaping (RestfulFlow<StudentResponse>) -> Void) {
+        cancellable = studentService.fetch(completion)
     }
     
     func getStudent(id:String) async -> StudentEntity?  {

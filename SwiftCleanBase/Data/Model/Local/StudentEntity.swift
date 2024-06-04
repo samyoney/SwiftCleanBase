@@ -10,21 +10,28 @@ import SwiftData
 @Model class StudentEntity {
     @Attribute(.unique) var id: String?
     @Attribute var birth: String?
-    @Attribute var courseId: String?
     @Attribute var name: String?
     
-    init(id: String?, birth: String?, courseId: String?, name: String?) {
+    @Relationship var course: CourseEntity?
+
+    init(id: String?, birth: String?, course: CourseEntity?, name: String?) {
         self.id = id
         self.birth = birth
-        self.courseId = courseId
+        self.course = course
         self.name = name
     }
+    
+    init(name: String?, birth: String?) {
+        self.name = name
+        self.birth = birth
+    }
+
 
     convenience init(studentDto: StudentDto) {
         self.init(
             id: studentDto.id,
             birth: studentDto.birth,
-            courseId: studentDto.courseId,
+            course: studentDto.course?.toCourseEntity(),
             name: studentDto.name
         )
     }

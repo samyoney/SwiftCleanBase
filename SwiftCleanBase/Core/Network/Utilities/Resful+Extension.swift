@@ -2,7 +2,7 @@
 //  Resful+Extension.swift
 //  SwiftCleanBase
 //
-//  Created by HS-Macbook on R 6/06/02.
+//  Created by グェン・ホン・ソン on R 6/06/02.
 //
 
 import Foundation
@@ -33,7 +33,7 @@ extension RestfulFlow {
                 return .success(try transform(value))
             }
         } catch {
-            return .failure(RestfulError.unKnown.message)
+            return .failure(RestfulError.unKnown)
         }
     }
 }
@@ -42,7 +42,7 @@ extension Publisher {
     func observer(_ completion: @escaping (RestfulFlow<Output>) -> Void) -> AnyCancellable {
         return sink(receiveCompletion: { subscriptionCompletion in
             if let error = subscriptionCompletion.error   {
-                completion(.failure(error.message))
+                completion(.failure(error))
             }
         }, receiveValue: { value in
             completion(.success(value))

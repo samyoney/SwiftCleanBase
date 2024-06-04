@@ -14,6 +14,12 @@ struct CourseDto: Identifiable, Codable {
     let topics: String?
 }
 
+extension CourseDto {
+    func toCourseEntity() -> CourseEntity {
+        return CourseEntity(id: self.id, name: self.name, instructor: self.instructor, topics: self.topics)
+    }
+}
+
 extension CourseEntity {
     func toCourseDto() -> CourseDto {
         return CourseDto(id: self.id, instructor: self.instructor, name: self.name, topics: self.topics)

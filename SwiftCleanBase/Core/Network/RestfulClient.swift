@@ -9,7 +9,8 @@ extension HTTPCodes {
     static let success = 200 ..< 300
 }
 
-class RestfulClient {
+
+class RestfulClient  {
     func fetch<R>(_ endpoint: RestfulEndpoint, using requestBody: R)
     -> AnyPublisher<RestfulResponse, RestfulError> where R: Encodable
     {

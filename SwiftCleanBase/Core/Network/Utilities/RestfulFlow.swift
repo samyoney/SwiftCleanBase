@@ -8,6 +8,6 @@
 import Foundation
 
 enum RestfulFlow<T> {
-    case failure(_ errorMsg: String)
+    case failure(_ error: RestfulError)
     case success(_ data: T)
 }

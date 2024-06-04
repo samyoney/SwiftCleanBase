@@ -2,7 +2,7 @@
 //  LoginService.swift
 //  SwiftCleanBase
 //
-//  Created by HS-Macbook on 2024/06/01.
+//  Created by グェン・ホン・ソン on 2024/06/01.
 //
 
 import Foundation

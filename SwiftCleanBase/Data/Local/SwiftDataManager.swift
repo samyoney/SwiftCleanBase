@@ -9,9 +9,10 @@ import Foundation
 import SwiftData
 
 class SwiftDataManager {
-    
+
     @MainActor
     private lazy var mainContext: ModelContext? = {
+
         let container = try? ModelContainer(
             for: CourseEntity.self, StudentEntity.self,
             configurations: .init()

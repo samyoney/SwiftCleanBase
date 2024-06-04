@@ -12,7 +12,7 @@ import SwiftData
     @Attribute var instructor: String?
     @Attribute var topics: String?
     
-    @Relationship(inverse: \StudentEntity.courseId)
+    @Relationship(deleteRule: .noAction, inverse: \StudentEntity.course)
     var student: [StudentEntity]?
         
     init(id: String?, name: String?, instructor: String?, topics: String?) {
