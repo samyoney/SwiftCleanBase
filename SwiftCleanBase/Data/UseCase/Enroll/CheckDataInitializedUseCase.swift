@@ -12,7 +12,7 @@ class CheckDataInitializedUseCase {
     
     @Injected private var courseRepository: CourseRepository
     
-    func callAsFunction() async -> Bool {
-        await (courseRepository.getEnrollCourse()?.isEmpty == false)
+    func callAsFunction() -> Bool {
+        courseRepository.getEnrollCourse()?.isEmpty == false
     }
 }

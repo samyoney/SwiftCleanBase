@@ -16,13 +16,13 @@ struct LoginBirthButton: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Birthday")
+            Text(R.string.textFile.birthday())
                 .font(.body)
             Button(action: {
                 showingPicker = true
             }) {
                 HStack {
-                    Text(birth.isEmpty ? "Select your birthday" : birth)
+                    Text(birth.isEmpty ? R.string.textFile.birthdayPlaceHolder() : birth)
                         .foregroundColor(birth.isEmpty ? .gray : .black)
                     Spacer()
                 }
@@ -36,12 +36,11 @@ struct LoginBirthButton: View {
                     showingPicker = false
                 })
             }
-            Text("Select your birth month and year.")
+            Text(R.string.textFile.birthdayDescription())
                 .font(.caption)
                 .foregroundColor(.gray)
         }
         .padding(.horizontal, 16)
-        .padding(.vertical, 20)
     }
 }
 
@@ -65,11 +64,11 @@ struct YearMonthPickerView: View {
                 }
             }
             HStack {
-                Button("Cancel") {
+                Button(R.string.textFile.cancel()) {
                     presentationMode.wrappedValue.dismiss()
                 }
                 Spacer()
-                Button("OK") {
+                Button(R.string.textFile.ok()) {
                     onYearMonthSelected(selectedYear, selectedMonth)
                     presentationMode.wrappedValue.dismiss()
                 }

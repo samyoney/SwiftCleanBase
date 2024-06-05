@@ -12,8 +12,8 @@ class GetStudentsUseCase {
     
     @Injected private var studentRepository: StudentRepository
     
-    func callAsFunction(courseId: String) async -> [StudentDto]? {
-        await studentRepository.getListStudent()?.map { entity in
+    func callAsFunction(courseId: String) -> [StudentDto]? {
+        studentRepository.getListStudent()?.map { entity in
             entity.toStudentDto()
         }
     }

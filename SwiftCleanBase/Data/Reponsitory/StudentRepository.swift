@@ -12,7 +12,7 @@ import Combine
 class StudentRepository {
     
     @Injected private var studentService: StudentService
-    @Injected private var swiftData: SwiftDataManager
+    @Injected private var studentDao: StudentDao
     
     private var cancellable: AnyCancellable?
     
@@ -20,20 +20,20 @@ class StudentRepository {
         cancellable = studentService.fetch(completion)
     }
     
-    func getStudent(id:String) async -> StudentEntity?  {
-        await swiftData.getStudent(id: id)
+    func getStudent(id:String) -> StudentEntity?  {
+        studentDao.getStudent(id: id)
     }
     
-    func getListStudent() async -> [StudentEntity]? {
-        await swiftData.getListStudent()
+    func getListStudent() -> [StudentEntity]? {
+        studentDao.getListStudent()
     }
     
-    func updateStudent(studentEntity: StudentEntity) async {
-        await swiftData.updateStudent(studentEntity: studentEntity)
+    func updateStudent(studentEntity: StudentEntity) {
+        studentDao.updateStudent(studentEntity: studentEntity)
     }
     
-    func insertListStudent(studentEntities: [StudentEntity]) async {
-        await swiftData.insertListStudent(studentEntities: studentEntities)
+    func insertListStudent(studentEntities: [StudentEntity]) {
+        studentDao.insertListStudent(studentEntities: studentEntities)
     }
     
     func suspend() {

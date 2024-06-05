@@ -1,6 +1,7 @@
 import Foundation
 
 enum RestfulError: Error {
+    
     case forbidden
     case notFound
     case conflict
@@ -9,16 +10,27 @@ enum RestfulError: Error {
     case connectionFail
     case dataError
     
-    
+    var code: String {
+        switch self {
+        case .unKnown:
+            return "U"
+        case .connectionFail:
+            return "C"
+        default:
+            return "O"
+        }
+    }
+
     var message: String {
         switch self {
         case .unKnown:
-            return "I dont know that error"
+            return "Unknown error"
+        case .connectionFail:
+            return "Internet is interrupted"
         default:
             return "Occurred Error"
         }
     }
-    
 }
 
 struct Empty: Encodable {

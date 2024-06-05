@@ -35,8 +35,7 @@ struct LaunchScreen: View {
                     }
                 }
             }.task {
-                let isInitialized = await checkDataInitializedUseCase()
-                print(isInitialized)
+                let isInitialized = checkDataInitializedUseCase()
             }
         } else {
             if checkLoggedInUseCase() {

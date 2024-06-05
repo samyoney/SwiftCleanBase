@@ -12,20 +12,20 @@ import Combine
 class CourseRepository {
     
     @Injected private var courseService: CourseService
-    @Injected private var swiftData: SwiftDataManager
-    
+    @Injected private var courseDao: CourseDao
+
     private var cancellable: AnyCancellable?
     
     func fetchCourses(_ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) {
         cancellable = courseService.fetch(completion)
     }
     
-    func insertListCourse(courseEntities: [CourseEntity]) async {
-        await swiftData.insertListCourse(courseEntities: courseEntities)
+    func insertListCourse(courseEntities: [CourseEntity]) {
+        courseDao.insertListCourse(courseEntities: courseEntities)
     }
     
-    func getEnrollCourse() async -> [CourseEntity]? {
-        await swiftData.getListCourse()
+    func getEnrollCourse() -> [CourseEntity]? {
+        courseDao.getListCourse()
     }
     
     func suspend() {

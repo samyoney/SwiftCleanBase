@@ -12,10 +12,10 @@ class RemoveStudentFromCourseUseCase {
     
     @Injected private var studentRepository: StudentRepository
     
-    func callAsFunction(id: String) async {
-        if let student = await studentRepository.getStudent(id: id) {
+    func callAsFunction(id: String) {
+        if let student = studentRepository.getStudent(id: id) {
             student.course = nil
-            await studentRepository.updateStudent(studentEntity: student)
+            studentRepository.updateStudent(studentEntity: student)
         }
     }
 }

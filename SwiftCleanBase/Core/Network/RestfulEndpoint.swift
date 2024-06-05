@@ -9,9 +9,9 @@ import Foundation
 
 
 #if DEBUG
-private let baseURL = URL(string: "https://rickandmortyapi.com/api/")
+private let baseURL = URL(string: "https://us-central1-samyoney.cloudfunctions.net/api/")
 #else
-private let baseURL = URL(string: "https://rickandmortyapi.com/api/")
+private let baseURL = URL(string: "https://us-central1-samyoney.cloudfunctions.net/api/")
 #endif
 
 protocol Endpoint {
@@ -24,34 +24,50 @@ protocol Endpoint {
     func body() throws -> Data?
 }
 
-enum RestfulEndpoint {
+enum Method {
+    case post
+    case get
+    
+    var rawString: String  {
+        switch self {
+        case .post: return "POST"
+        default: return "GET"
+        }
+    }
+}
+
+enum RestfulEndpoint: Endpoint {
     func body() throws -> Data? {
         return nil
     }
     
-    var method: String{
-        switch self {
-        case .login: return "POST"
-        case .register: return "POST"
-        case .student: return "GET"
-        case .course: return "GET"
-        }
+    var method: String {
+        _method.rawString
     }
     
     var headers: [String : String]? {
-        return ["x-api-key": self.path]
+        return ["Content-Type": "application/json"]
     }
     
     var url: URL {
-        return URL(string: self.path, relativeTo: baseURL)!
+        return URL(string: self._path, relativeTo: baseURL)!
     }
     
-    private var path: String {
+    private var _method: Method {
         switch self {
-        case .login: return "login/"
-        case .register: return "register/"
-        case .student: return "get/student/"
-        case .course: return "get/course/"
+        case .login: return .post
+        case .register: return .post
+        case .student: return .get
+        case .course: return .get
+        }
+    }
+    
+    private var _path: String {
+        switch self {
+        case .login: return "login"
+        case .register: return "register"
+        case .student: return "students"
+        case .course: return "courses"
         }
     }
     

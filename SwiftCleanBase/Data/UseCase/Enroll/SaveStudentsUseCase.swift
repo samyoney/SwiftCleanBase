@@ -12,10 +12,10 @@ class SaveStudentsUseCase {
     
     @Injected private var studentRepository: StudentRepository
     
-    func callAsFunction(students: [Student]) async {
+    func callAsFunction(students: [Student]) {
         let listStudentEntity = students.map { it in
             StudentEntity(name: it.name, birth: it.birth)
         }
-        await studentRepository.insertListStudent(studentEntities: listStudentEntity)
+        studentRepository.insertListStudent(studentEntities: listStudentEntity)
     }
 }

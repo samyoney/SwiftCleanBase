@@ -2,16 +2,15 @@ import Foundation
 import Combine
 import Reachability
 
-
 typealias HTTPCode = Int
 typealias HTTPCodes = Range<HTTPCode>
 extension HTTPCodes {
     static let success = 200 ..< 300
 }
 
-
 class RestfulClient  {
-    func fetch<R>(_ endpoint: RestfulEndpoint, using requestBody: R)
+
+    func fetch<R>(_ endpoint: Endpoint, using requestBody: R)
     -> AnyPublisher<RestfulResponse, RestfulError> where R: Encodable
     {
         startRequest(for: endpoint, requestBody: requestBody)
@@ -20,7 +19,7 @@ class RestfulClient  {
             }
             .eraseToAnyPublisher()
     }
-
+    
     private lazy var session = {
         URLSession(configuration: URLSessionConfiguration.default)
     }()
@@ -30,16 +29,23 @@ class RestfulClient  {
     }()
     
     
-    private func startRequest<R: Encodable>(for endpoint: RestfulEndpoint, requestBody: R? = nil)
+    private func startRequest<R: Encodable>(for endpoint: Endpoint, requestBody: R? = nil)
     -> AnyPublisher<RestfulResponse, Error> {
         var request: URLRequest
         do {
             request = try buildRequest(endpoint: endpoint, requestBody: requestBody)
         } catch {
+            print("❌ Configuration Request Failed")
             return Fail(error: error).eraseToAnyPublisher()
         }
-        
         return session.dataTaskPublisher(for: request)
+            .handleEvents(receiveSubscription: { _ in
+                print("Starting network request")
+            }, receiveOutput: { _ in
+            }, receiveCompletion: { _ in
+            }, receiveCancel: {
+                print("Request cancelled")
+            })
             .tryMap { (data: Data, response: URLResponse) in
                 assert(!Thread.isMainThread)
                 if self.reachability.connection == .unavailable {
@@ -49,7 +55,8 @@ class RestfulClient  {
                         if HTTPCodes.success.contains(response.statusCode) {
                             return RestfulResponse(data: data, response: response)
                         } else {
-                            throw self.filterError(response.statusCode)
+                            let error = self.filterError(response.statusCode)
+                            throw error
                         }
                     } else {
                         throw RestfulError.dataError
@@ -59,22 +66,28 @@ class RestfulClient  {
             .eraseToAnyPublisher()
     }
     
-    private func buildRequest<R: Encodable>(endpoint: RestfulEndpoint,
+    private func buildRequest<R: Encodable>(endpoint: Endpoint,
                                             requestBody: R?) throws -> URLRequest {
         var request = URLRequest(url: endpoint.url, timeoutInterval: 10)
+        print("🚀 \(endpoint.method) API: \(request)")
         request.httpMethod = endpoint.method
-        if requestBody! is Empty {
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if !(requestBody is Empty) {
             if let body = requestBody {
                 do {
+                    print("📥 HTTP Request:")
+                    printPretty(body)
                     request.httpBody = try JSONEncoder().encode(body)
                 } catch {
                     throw RestfulError.dataError
                 }
             }
+        } else {
+            print("📥 Request is empty")
         }
         return request
     }
-    
+
     struct RestfulResponse {
         let data: Data
         let response: HTTPURLResponse

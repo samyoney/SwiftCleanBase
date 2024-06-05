@@ -13,10 +13,10 @@ class AddStudentIntoCourseUseCase {
     @Injected private var studentRepository: StudentRepository
     @Injected private var courseRepository: CourseRepository
 
-    func callAsFunction(id: String, courseId: String) async {
-        if let student = await studentRepository.getStudent(id: id) {
-            student.course = await courseRepository.getEnrollCourse()?.first { it in it.id == courseId }
-            await studentRepository.updateStudent(studentEntity: student)
+    func callAsFunction(id: String, courseId: String) {
+        if let student = studentRepository.getStudent(id: id) {
+            student.course = courseRepository.getEnrollCourse()?.first { it in it.id == courseId }
+            studentRepository.updateStudent(studentEntity: student)
         }
     }
 }

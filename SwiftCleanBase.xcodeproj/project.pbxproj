@@ -56,13 +56,17 @@
 		DEDA663C2C0EEB8B003FEF76 /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA663B2C0EEB8B003FEF76 /* CourseListView.swift */; };
 		DEDA663E2C0EEC36003FEF76 /* StudentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA663D2C0EEC36003FEF76 /* StudentListView.swift */; };
 		DEDA66402C0EECED003FEF76 /* SamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA663F2C0EECED003FEF76 /* SamView.swift */; };
+		DEDA66422C0F11A0003FEF76 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66412C0F11A0003FEF76 /* LoginViewModel.swift */; };
+		DEDA66472C0F19F3003FEF76 /* StateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66462C0F19F3003FEF76 /* StateObserver.swift */; };
+		DEDA66492C0F1ADB003FEF76 /* LoginEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66482C0F1ADB003FEF76 /* LoginEvent.swift */; };
+		DEDA664C2C102D6C003FEF76 /* StudentDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA664B2C102D6B003FEF76 /* StudentDao.swift */; };
+		DEDA664E2C102D91003FEF76 /* CourseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA664D2C102D91003FEF76 /* CourseDao.swift */; };
 		DEDFB5F62C07164C0063E752 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F22C07164C0063E752 /* loader.json */; };
 		DEDFB5F72C07164C0063E752 /* TextFile.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F32C07164C0063E752 /* TextFile.strings */; };
 		DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6012C0811870063E752 /* CourseEntity.swift */; };
 		DEDFB6042C0816FB0063E752 /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6032C0816FB0063E752 /* StudentEntity.swift */; };
 		DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6082C0821840063E752 /* CourseDto.swift */; };
 		DEDFB60B2C0821CC0063E752 /* StudentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB60A2C0821CC0063E752 /* StudentDto.swift */; };
-		DEDFB60E2C082A6F0063E752 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB60D2C082A6F0063E752 /* SwiftDataManager.swift */; };
 		DEDFB6122C0842E30063E752 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */; };
 		DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6162C0847660063E752 /* RestfulClient.swift */; };
 		DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFB6182C08479B0063E752 /* RestfulError.swift */; };
@@ -142,13 +146,17 @@
 		DEDA663B2C0EEB8B003FEF76 /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		DEDA663D2C0EEC36003FEF76 /* StudentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListView.swift; sourceTree = "<group>"; };
 		DEDA663F2C0EECED003FEF76 /* SamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamView.swift; sourceTree = "<group>"; };
+		DEDA66412C0F11A0003FEF76 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DEDA66462C0F19F3003FEF76 /* StateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObserver.swift; sourceTree = "<group>"; };
+		DEDA66482C0F1ADB003FEF76 /* LoginEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEvent.swift; sourceTree = "<group>"; };
+		DEDA664B2C102D6B003FEF76 /* StudentDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDao.swift; sourceTree = "<group>"; };
+		DEDA664D2C102D91003FEF76 /* CourseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDao.swift; sourceTree = "<group>"; };
 		DEDFB5F22C07164C0063E752 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		DEDFB5F32C07164C0063E752 /* TextFile.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TextFile.strings; sourceTree = "<group>"; };
 		DEDFB6012C0811870063E752 /* CourseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEntity.swift; sourceTree = "<group>"; };
 		DEDFB6032C0816FB0063E752 /* StudentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEntity.swift; sourceTree = "<group>"; };
 		DEDFB6082C0821840063E752 /* CourseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDto.swift; sourceTree = "<group>"; };
 		DEDFB60A2C0821CC0063E752 /* StudentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDto.swift; sourceTree = "<group>"; };
-		DEDFB60D2C082A6F0063E752 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 		DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		DEDFB6162C0847660063E752 /* RestfulClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestfulClient.swift; sourceTree = "<group>"; };
 		DEDFB6182C08479B0063E752 /* RestfulError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestfulError.swift; sourceTree = "<group>"; };
@@ -368,6 +376,8 @@
 			children = (
 				DEDA66382C0EEB1F003FEF76 /* View */,
 				DE646BCA2C06FB48005533D0 /* LoginView.swift */,
+				DEDA66482C0F1ADB003FEF76 /* LoginEvent.swift */,
+				DEDA66412C0F11A0003FEF76 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -406,6 +416,22 @@
 				DEDA663D2C0EEC36003FEF76 /* StudentListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DEDA66442C0F19EB003FEF76 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				DEDA66462C0F19F3003FEF76 /* StateObserver.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		DEDA664A2C102D2C003FEF76 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		DEDFB5EE2C0711B50063E752 /* Data */ = {
@@ -470,8 +496,8 @@
 		DEDFB6102C0842AC0063E752 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				DEDFB60D2C082A6F0063E752 /* SwiftDataManager.swift */,
-				DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */,
+				DEDA664B2C102D6B003FEF76 /* StudentDao.swift */,
+				DEDA664D2C102D91003FEF76 /* CourseDao.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -479,6 +505,8 @@
 		DEEE5D332C086BD800A015BE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DEDA664A2C102D2C003FEF76 /* Cache */,
+				DEDA66442C0F19EB003FEF76 /* State */,
 				DEEE5D342C086BE300A015BE /* Network */,
 			);
 			path = Core;
@@ -648,8 +676,10 @@
 				DEDA662D2C0EE50F003FEF76 /* LoginBirthButton.swift in Sources */,
 				4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */,
 				4405010D2C0AC1EE00F4616C /* AppModule.swift in Sources */,
+				DEDA66422C0F11A0003FEF76 /* LoginViewModel.swift in Sources */,
 				DEDA661D2C0EBB34003FEF76 /* GetStudentsUseCase.swift in Sources */,
 				DEDA661B2C0EB972003FEF76 /* GetStudentsByCourseIdUseCase.swift in Sources */,
+				DEDA664E2C102D91003FEF76 /* CourseDao.swift in Sources */,
 				DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */,
 				DEDFB6122C0842E30063E752 /* UserDefaultManager.swift in Sources */,
 				DEDA66192C0EB948003FEF76 /* GetCoursesUseCase.swift in Sources */,
@@ -659,11 +689,14 @@
 				DEDA66152C0EB7F3003FEF76 /* FetchStudentsUseCase.swift in Sources */,
 				DEDA66402C0EECED003FEF76 /* SamView.swift in Sources */,
 				DEDA66032C0DB50E003FEF76 /* FetchLoginUseCase.swift in Sources */,
+				DEDA66472C0F19F3003FEF76 /* StateObserver.swift in Sources */,
 				440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */,
 				DED158AB2C0D967B0090FE66 /* AccountRepository.swift in Sources */,
+				DEDA664C2C102D6C003FEF76 /* StudentDao.swift in Sources */,
 				DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */,
 				DEDA663E2C0EEC36003FEF76 /* StudentListView.swift in Sources */,
 				DED158A52C0D954E0090FE66 /* StudentService.swift in Sources */,
+				DEDA66492C0F1ADB003FEF76 /* LoginEvent.swift in Sources */,
 				DEDA660C2C0EB362003FEF76 /* SaveAccountInfoUseCase.swift in Sources */,
 				DEDA661F2C0EBBA4003FEF76 /* RemoveStudentFromCourseUseCase.swift in Sources */,
 				DEDA66362C0EE82C003FEF76 /* Spacer.swift in Sources */,
@@ -680,7 +713,6 @@
 				440501622C0AFC3900F4616C /* RegisterRequest.swift in Sources */,
 				DED158A12C0D87770090FE66 /* RegisterService.swift in Sources */,
 				DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */,
-				DEDFB60E2C082A6F0063E752 /* SwiftDataManager.swift in Sources */,
 				440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */,
 				DEDA66082C0EB26D003FEF76 /* FetchAutoLoginUseCase.swift in Sources */,
 				DEDA662F2C0EE68C003FEF76 /* LoginButton.swift in Sources */,

@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var username: String = ""
-    @State var password: String = ""
-    @State var name: String = ""
-    @State var birth: String = ""
-    @State var isRegisterScreen = false
-    @State var isShowError = false
+    
+    @ObservedObject var viewModel: LoginViewModel = .init()
 
     @Environment(\.dismiss) private var dismiss
     
-    
     @FocusState private var focusedField: Field?
+    
     enum Field: Hashable {
         case username, password, name
     }
@@ -27,17 +23,25 @@ struct LoginView: View {
         NavigationView {
 
             VStack {
-                if isRegisterScreen {
-                    RegisterContentView(username: $username, password: $password, name: $name, birth: $birth)
+                if viewModel.isRegisterScreen {
+                    RegisterContentView(username: $viewModel.username, password: $viewModel.password, name: $viewModel.name, birth: $viewModel.birth, registerAction: {
+                        viewModel.onRegister()
+                    }, backToLoginAction: {
+                        viewModel.onChangeMode()
+                    })
                 } else {
-                    LoginContentView(username: $username, password: $password)
+                    LoginContentView(username: $viewModel.username, password: $viewModel.password, loginAction: {
+                        viewModel.onLogin()
+                    }, goToRegisterAction: {
+                        viewModel.onChangeMode()
+                    })
                 }
             }
-            .navigationBarTitle(isRegisterScreen ? "Register" : "Login", displayMode: .inline)
+            .navigationBarTitle(viewModel.isRegisterScreen ? R.string.textFile.register() : R.string.textFile.login(), displayMode: .inline)
             .onTapGesture {
                 hideKeyboard()
             }
-            .alert(isPresented: $isShowError) {
+            .alert(isPresented: $viewModel.isShowingError) {
                 Alert(
                     title: Text("Error"),
                     message: Text("Unknown error"),
@@ -57,27 +61,32 @@ struct LoginContentView: View {
     @Binding var username: String
     @Binding var password: String
     
+    var loginAction: () -> Void
+    var goToRegisterAction: () -> Void
+
     var body: some View {
         VStack {
+            ExtraLargeSpacer()
             LoginInputField(
                 label: R.string.textFile.name(),
                 value: $username,
-                placeholder: "Enter your username",
-                helperText: "Username description"
+                placeholder: R.string.textFile.placeHolder(),
+                helperText: R.string.textFile.description()
             )
-            .padding(.top, 38)
+            ExtraLargeSpacer()
             LoginInputField(
-                label: "Password",
+                label: R.string.textFile.password(),
                 value: $password,
-                placeholder: "Enter your password",
-                helperText: "Password description"
+                placeholder: R.string.textFile.placeHolder(),
+                helperText: R.string.textFile.description()
             )
-            .padding(.top, 20)
-            Spacer().frame(height: 30)
-            LoginButton(title: "Login") {
+            ExtraLargeSpacer()
+            LoginButton(title: R.string.textFile.login()) {
+                loginAction()
             }
-            Spacer().frame(height: 30)
-            LoginButton(title: "Go to Register") {
+            ExtraLargeSpacer()
+            LoginButton(title: R.string.textFile.goToRegister()) {
+                goToRegisterAction()
             }
         }
         .padding(.horizontal, 16)
@@ -90,36 +99,42 @@ struct RegisterContentView: View {
     @Binding var name: String
     @Binding var birth: String
     
+    var registerAction: () -> Void
+    var backToLoginAction: () -> Void
+
     var body: some View {
         VStack {
+            ExtraLargeSpacer()
             LoginInputField(
-                label: "Username",
+                label: R.string.textFile.name(),
                 value: $username,
-                placeholder: "Enter your username",
-                helperText: "Username description"
+                placeholder: R.string.textFile.placeHolder(),
+                helperText: R.string.textFile.description()
             )
-            .padding(.top, 38)
+            ExtraLargeSpacer()
             LoginInputField(
-                label: "Password",
+                label: R.string.textFile.password(),
                 value: $password,
-                placeholder: "Enter your password",
-                helperText: "Password description"
+                placeholder: R.string.textFile.placeHolder(),
+                helperText: R.string.textFile.description()
             )
-            .padding(.top, 20)
+            ExtraLargeSpacer()
             LoginInputField(
-                label: "Name",
+                label: R.string.textFile.name(),
                 value: $name,
-                placeholder: "Enter your name",
-                helperText: "Name description"
+                placeholder: R.string.textFile.placeHolder(),
+                helperText: R.string.textFile.description()
             )
-            .padding(.top, 20)
+            ExtraLargeSpacer()
             LoginBirthButton(birth: $birth) { year, month in
             }
-            Spacer().frame(height: 30)
-            LoginButton(title: "Register") {
+            ExtraLargeSpacer()
+            LoginButton(title: R.string.textFile.register()) {
+                registerAction()
             }
-            Spacer().frame(height: 30)
-            LoginButton(title: "Back to Login") {
+            ExtraLargeSpacer()
+            LoginButton(title: R.string.textFile.backToLogin()) {
+                backToLoginAction()
             }
         }
         .padding(.horizontal, 16)

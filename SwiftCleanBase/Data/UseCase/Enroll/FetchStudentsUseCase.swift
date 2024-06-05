@@ -17,10 +17,8 @@ class FetchStudentsUseCase {
             switch flow {
             case .failure(let error):
                 failure(error)
-                break;
             case .success(let data):
                 onNext(data)
-                break;
             }
         }
     }

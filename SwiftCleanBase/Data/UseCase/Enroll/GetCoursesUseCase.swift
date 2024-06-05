@@ -12,8 +12,8 @@ class GetCoursesUseCase {
     
     @Injected private var courseRepository: CourseRepository
     
-    func callAsFunction() async -> [CourseDto]? {
-        await courseRepository.getEnrollCourse()?.map { entity in
+    func callAsFunction() -> [CourseDto]? {
+        courseRepository.getEnrollCourse()?.map { entity in
             entity.toCourseDto()
         }
     }

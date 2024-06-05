@@ -7,19 +7,28 @@
 
 import Foundation
 import Resolver
+import SwiftData
 
 extension Resolver: ResolverRegistering {
-    public static func registerAllServices() {
+    @MainActor public static func registerAllServices() {
         defaultScope = .graph
         registerSingletons()
         registerRemote()
+        registerDb()
         registerRepository()
         registerUseCase()
     }
     
-    private static func registerSingletons() {
+    @MainActor private static func registerSingletons() {
+        let mainContext = {
+            let container = try? ModelContainer(
+                for: CourseEntity.self, StudentEntity.self,
+                configurations: .init()
+            )
+            return container?.mainContext
+        }()
+        register { mainContext }.scope(.application)
         register { RestfulClient() }.scope(.application)
-        register { SwiftDataManager() }.scope(.application)
         register { UserDefaultManager() }.scope(.application)
     }
     
@@ -30,6 +39,11 @@ extension Resolver: ResolverRegistering {
         register { CourseServiceImpl() as CourseService }
     }
     
+    private static func registerDb() {
+        register { StudentDao() }
+        register { CourseDao() }
+    }
+
     private static func registerRepository() {
         register { AccountRepository() }
         register { CourseRepository() }
