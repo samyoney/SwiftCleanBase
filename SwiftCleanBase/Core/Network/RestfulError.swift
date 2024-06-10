@@ -8,7 +8,7 @@ enum RestfulError: Error {
     case internalServerError
     case unKnown
     case connectionFail
-    case dataError
+    case dataError(_ error: Error)
     
     var code: String {
         switch self {
@@ -32,8 +32,3 @@ enum RestfulError: Error {
         }
     }
 }
-
-struct Empty: Encodable {
-    
-}
-

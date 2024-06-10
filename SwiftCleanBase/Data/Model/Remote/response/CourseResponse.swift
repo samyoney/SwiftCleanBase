@@ -10,7 +10,7 @@ import Foundation
 struct CourseResponse: BaseResponse {
     let status: Int
     let message: String
-    let course: [Course]
+    let courses: [Course]
 }
 
 struct Course: Codable {

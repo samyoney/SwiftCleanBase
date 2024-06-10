@@ -17,6 +17,11 @@
 		440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015F2C0AFC3900F4616C /* StudentResponse.swift */; };
 		4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016A2C0AFCA100F4616C /* LoginService.swift */; };
 		4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */; };
+		DE37670B2C168EC500861D38 /* Nothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670A2C168EC500861D38 /* Nothing.swift */; };
+		DE37670D2C1698A600861D38 /* LauchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670C2C1698A600861D38 /* LauchContract.swift */; };
+		DE3767102C16A0C000861D38 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */; };
+		DE3767142C16A82800861D38 /* SamContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767132C16A82800861D38 /* SamContract.swift */; };
+		DE3767162C16A83400861D38 /* SamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767152C16A83400861D38 /* SamViewModel.swift */; };
 		DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */; };
 		DE646BCB2C06FB48005533D0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BCA2C06FB48005533D0 /* LoginView.swift */; };
 		DE646BCD2C06FB6E005533D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE646BCC2C06FB6E005533D0 /* Assets.xcassets */; };
@@ -48,7 +53,7 @@
 		DEDA661F2C0EBBA4003FEF76 /* RemoveStudentFromCourseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA661E2C0EBBA4003FEF76 /* RemoveStudentFromCourseUseCase.swift */; };
 		DEDA66212C0EBC13003FEF76 /* SaveCoursesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66202C0EBC13003FEF76 /* SaveCoursesUseCase.swift */; };
 		DEDA66232C0EBCDE003FEF76 /* SaveStudentsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66222C0EBCDE003FEF76 /* SaveStudentsUseCase.swift */; };
-		DEDA66292C0EBFFF003FEF76 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66282C0EBFFF003FEF76 /* LaunchScreen.swift */; };
+		DEDA66292C0EBFFF003FEF76 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66282C0EBFFF003FEF76 /* LaunchView.swift */; };
 		DEDA662D2C0EE50F003FEF76 /* LoginBirthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA662C2C0EE50F003FEF76 /* LoginBirthButton.swift */; };
 		DEDA662F2C0EE68C003FEF76 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA662E2C0EE68C003FEF76 /* LoginButton.swift */; };
 		DEDA66332C0EE7BE003FEF76 /* LoginInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66322C0EE7BE003FEF76 /* LoginInputField.swift */; };
@@ -57,8 +62,8 @@
 		DEDA663E2C0EEC36003FEF76 /* StudentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA663D2C0EEC36003FEF76 /* StudentListView.swift */; };
 		DEDA66402C0EECED003FEF76 /* SamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA663F2C0EECED003FEF76 /* SamView.swift */; };
 		DEDA66422C0F11A0003FEF76 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66412C0F11A0003FEF76 /* LoginViewModel.swift */; };
-		DEDA66472C0F19F3003FEF76 /* StateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66462C0F19F3003FEF76 /* StateObserver.swift */; };
-		DEDA66492C0F1ADB003FEF76 /* LoginEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66482C0F1ADB003FEF76 /* LoginEvent.swift */; };
+		DEDA66472C0F19F3003FEF76 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66462C0F19F3003FEF76 /* LoadingState.swift */; };
+		DEDA66492C0F1ADB003FEF76 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA66482C0F1ADB003FEF76 /* LoginContract.swift */; };
 		DEDA664C2C102D6C003FEF76 /* StudentDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA664B2C102D6B003FEF76 /* StudentDao.swift */; };
 		DEDA664E2C102D91003FEF76 /* CourseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA664D2C102D91003FEF76 /* CourseDao.swift */; };
 		DEDFB5F62C07164C0063E752 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = DEDFB5F22C07164C0063E752 /* loader.json */; };
@@ -104,6 +109,11 @@
 		4405015F2C0AFC3900F4616C /* StudentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResponse.swift; sourceTree = "<group>"; };
 		4405016A2C0AFCA100F4616C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resful+Extension.swift"; sourceTree = "<group>"; };
+		DE37670A2C168EC500861D38 /* Nothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nothing.swift; sourceTree = "<group>"; };
+		DE37670C2C1698A600861D38 /* LauchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchContract.swift; sourceTree = "<group>"; };
+		DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		DE3767132C16A82800861D38 /* SamContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamContract.swift; sourceTree = "<group>"; };
+		DE3767152C16A83400861D38 /* SamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamViewModel.swift; sourceTree = "<group>"; };
 		DE646BC52C06FB48005533D0 /* SwiftCleanBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCleanBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCleanBaseApp.swift; sourceTree = "<group>"; };
 		DE646BCA2C06FB48005533D0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -138,7 +148,7 @@
 		DEDA66202C0EBC13003FEF76 /* SaveCoursesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCoursesUseCase.swift; sourceTree = "<group>"; };
 		DEDA66222C0EBCDE003FEF76 /* SaveStudentsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveStudentsUseCase.swift; sourceTree = "<group>"; };
 		DEDA66252C0EBF2D003FEF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DEDA66282C0EBFFF003FEF76 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		DEDA66282C0EBFFF003FEF76 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		DEDA662C2C0EE50F003FEF76 /* LoginBirthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBirthButton.swift; sourceTree = "<group>"; };
 		DEDA662E2C0EE68C003FEF76 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		DEDA66322C0EE7BE003FEF76 /* LoginInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputField.swift; sourceTree = "<group>"; };
@@ -147,8 +157,8 @@
 		DEDA663D2C0EEC36003FEF76 /* StudentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListView.swift; sourceTree = "<group>"; };
 		DEDA663F2C0EECED003FEF76 /* SamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamView.swift; sourceTree = "<group>"; };
 		DEDA66412C0F11A0003FEF76 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		DEDA66462C0F19F3003FEF76 /* StateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObserver.swift; sourceTree = "<group>"; };
-		DEDA66482C0F1ADB003FEF76 /* LoginEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEvent.swift; sourceTree = "<group>"; };
+		DEDA66462C0F19F3003FEF76 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		DEDA66482C0F1ADB003FEF76 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		DEDA664B2C102D6B003FEF76 /* StudentDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDao.swift; sourceTree = "<group>"; };
 		DEDA664D2C102D91003FEF76 /* CourseDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDao.swift; sourceTree = "<group>"; };
 		DEDFB5F22C07164C0063E752 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
@@ -253,6 +263,14 @@
 			name = Remote;
 			path = SwiftCleanBase/Data/Remote;
 			sourceTree = SOURCE_ROOT;
+		};
+		DE3767092C168EB800861D38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE37670A2C168EC500861D38 /* Nothing.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
 		};
 		DE646BBC2C06FB48005533D0 = {
 			isa = PBXGroup;
@@ -366,7 +384,9 @@
 		DEDA66272C0EBFF3003FEF76 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				DEDA66282C0EBFFF003FEF76 /* LaunchScreen.swift */,
+				DEDA66282C0EBFFF003FEF76 /* LaunchView.swift */,
+				DE37670C2C1698A600861D38 /* LauchContract.swift */,
+				DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -376,7 +396,7 @@
 			children = (
 				DEDA66382C0EEB1F003FEF76 /* View */,
 				DE646BCA2C06FB48005533D0 /* LoginView.swift */,
-				DEDA66482C0F1ADB003FEF76 /* LoginEvent.swift */,
+				DEDA66482C0F1ADB003FEF76 /* LoginContract.swift */,
 				DEDA66412C0F11A0003FEF76 /* LoginViewModel.swift */,
 			);
 			path = Login;
@@ -405,6 +425,8 @@
 			children = (
 				DEDA663A2C0EEB7E003FEF76 /* View */,
 				DEDA663F2C0EECED003FEF76 /* SamView.swift */,
+				DE3767132C16A82800861D38 /* SamContract.swift */,
+				DE3767152C16A83400861D38 /* SamViewModel.swift */,
 			);
 			path = Sam;
 			sourceTree = "<group>";
@@ -421,7 +443,7 @@
 		DEDA66442C0F19EB003FEF76 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				DEDA66462C0F19F3003FEF76 /* StateObserver.swift */,
+				DEDA66462C0F19F3003FEF76 /* LoadingState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -505,6 +527,7 @@
 		DEEE5D332C086BD800A015BE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DE3767092C168EB800861D38 /* Model */,
 				DEDA664A2C102D2C003FEF76 /* Cache */,
 				DEDA66442C0F19EB003FEF76 /* State */,
 				DEEE5D342C086BE300A015BE /* Network */,
@@ -671,7 +694,7 @@
 			files = (
 				DEDA66062C0EB1A1003FEF76 /* CheckLoggedInUseCase.swift in Sources */,
 				DE646BCB2C06FB48005533D0 /* LoginView.swift in Sources */,
-				DEDA66292C0EBFFF003FEF76 /* LaunchScreen.swift in Sources */,
+				DEDA66292C0EBFFF003FEF76 /* LaunchView.swift in Sources */,
 				440501672C0AFC3900F4616C /* RegisterResponse.swift in Sources */,
 				DEDA662D2C0EE50F003FEF76 /* LoginBirthButton.swift in Sources */,
 				4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */,
@@ -689,15 +712,19 @@
 				DEDA66152C0EB7F3003FEF76 /* FetchStudentsUseCase.swift in Sources */,
 				DEDA66402C0EECED003FEF76 /* SamView.swift in Sources */,
 				DEDA66032C0DB50E003FEF76 /* FetchLoginUseCase.swift in Sources */,
-				DEDA66472C0F19F3003FEF76 /* StateObserver.swift in Sources */,
+				DEDA66472C0F19F3003FEF76 /* LoadingState.swift in Sources */,
+				DE3767162C16A83400861D38 /* SamViewModel.swift in Sources */,
 				440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */,
+				DE3767102C16A0C000861D38 /* LaunchViewModel.swift in Sources */,
 				DED158AB2C0D967B0090FE66 /* AccountRepository.swift in Sources */,
 				DEDA664C2C102D6C003FEF76 /* StudentDao.swift in Sources */,
 				DEDFB6092C0821840063E752 /* CourseDto.swift in Sources */,
 				DEDA663E2C0EEC36003FEF76 /* StudentListView.swift in Sources */,
 				DED158A52C0D954E0090FE66 /* StudentService.swift in Sources */,
-				DEDA66492C0F1ADB003FEF76 /* LoginEvent.swift in Sources */,
+				DEDA66492C0F1ADB003FEF76 /* LoginContract.swift in Sources */,
+				DE37670B2C168EC500861D38 /* Nothing.swift in Sources */,
 				DEDA660C2C0EB362003FEF76 /* SaveAccountInfoUseCase.swift in Sources */,
+				DE3767142C16A82800861D38 /* SamContract.swift in Sources */,
 				DEDA661F2C0EBBA4003FEF76 /* RemoveStudentFromCourseUseCase.swift in Sources */,
 				DEDA66362C0EE82C003FEF76 /* Spacer.swift in Sources */,
 				DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */,
@@ -713,6 +740,7 @@
 				440501622C0AFC3900F4616C /* RegisterRequest.swift in Sources */,
 				DED158A12C0D87770090FE66 /* RegisterService.swift in Sources */,
 				DEEE5D312C0868EA00A015BE /* RestfulEndpoint.swift in Sources */,
+				DE37670D2C1698A600861D38 /* LauchContract.swift in Sources */,
 				440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */,
 				DEDA66082C0EB26D003FEF76 /* FetchAutoLoginUseCase.swift in Sources */,
 				DEDA662F2C0EE68C003FEF76 /* LoginButton.swift in Sources */,

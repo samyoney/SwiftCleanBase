@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 struct LoginInputField: View {
-    var label: String
     @Binding var value: String
+
+    var label: String
     var placeholder: String
     var helperText: String
 

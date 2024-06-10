@@ -15,13 +15,14 @@ import SwiftData
     @Relationship var course: CourseEntity?
 
     init(id: String?, birth: String?, course: CourseEntity?, name: String?) {
-        self.id = id
+        self.id = id ?? UUID().uuidString
         self.birth = birth
         self.course = course
         self.name = name
     }
     
     init(name: String?, birth: String?) {
+        self.id = UUID().uuidString
         self.name = name
         self.birth = birth
     }

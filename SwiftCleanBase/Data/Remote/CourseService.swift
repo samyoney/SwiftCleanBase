@@ -19,7 +19,7 @@ class CourseServiceImpl: CourseService {
     @Injected private var restfulClient: RestfulClient
     
     func fetch(_ completion: @escaping (RestfulFlow<CourseResponse>) -> Void) -> AnyCancellable {
-        restfulClient.fetch(RestfulEndpoint.course, using: Empty())
+        restfulClient.fetch(RestfulEndpoint.course, using: Nothing())
             .observer { flow in
                 completion(flow.map { result in
                     try result.parseJson()

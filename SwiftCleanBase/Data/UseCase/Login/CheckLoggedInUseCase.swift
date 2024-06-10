@@ -13,6 +13,6 @@ class CheckLoggedInUseCase {
     @Injected private var repository: AccountRepository
     
     func callAsFunction() -> Bool {
-        repository.username.isEmpty || repository.password.isEmpty
+        !repository.username.isEmpty && !repository.password.isEmpty
     }
 }

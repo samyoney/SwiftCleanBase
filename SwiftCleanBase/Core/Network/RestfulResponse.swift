@@ -19,7 +19,7 @@ struct RestfulResponse {
             let result = try JSONDecoder().decode(T.self, from: data)
             return result
         } catch {
-            throw RestfulError.dataError
+            throw RestfulError.dataError(error)
         }
     }
 }

@@ -59,7 +59,7 @@ class RestfulClient  {
                             throw error
                         }
                     } else {
-                        throw RestfulError.dataError
+                        throw RestfulError.unKnown
                     }
                 }
             }
@@ -72,14 +72,14 @@ class RestfulClient  {
         print("🚀 \(endpoint.method) API: \(request)")
         request.httpMethod = endpoint.method
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        if !(requestBody is Empty) {
+        if !(requestBody is Nothing) {
             if let body = requestBody {
                 do {
                     print("📥 HTTP Request:")
                     printPretty(body)
                     request.httpBody = try JSONEncoder().encode(body)
                 } catch {
-                    throw RestfulError.dataError
+                    throw RestfulError.dataError(error)
                 }
             }
         } else {
@@ -100,7 +100,8 @@ class RestfulClient  {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 return result
             } catch {
-                throw RestfulError.dataError
+                try JSONDecoder().decode(CourseResponse.self, from: data)
+                throw RestfulError.dataError(error)
             }
         }
     }

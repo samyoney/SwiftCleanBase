@@ -58,7 +58,7 @@ struct CardView<Content: View>: View {
     
     var body: some View {
         content
-            .background(Color.white)
+            .background(.transparent)
             .cornerRadius(8)
             .shadow(radius: 4)
     }

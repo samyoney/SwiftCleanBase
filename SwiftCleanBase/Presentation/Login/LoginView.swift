@@ -9,45 +9,39 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @ObservedObject var viewModel: LoginViewModel = .init()
+    @StateObject var viewModel: LoginViewModel = .init()
 
     @Environment(\.dismiss) private var dismiss
     
     @FocusState private var focusedField: Field?
-    
+
     enum Field: Hashable {
         case username, password, name
     }
     
     var body: some View {
         NavigationView {
-
             VStack {
-                if viewModel.isRegisterScreen {
-                    RegisterContentView(username: $viewModel.username, password: $viewModel.password, name: $viewModel.name, birth: $viewModel.birth, registerAction: {
-                        viewModel.onRegister()
+                if viewModel.state.isRegisterScreen {
+                    RegisterContentView(username: $viewModel.state.username, password: $viewModel.state.password, name: $viewModel.state.name, birth: $viewModel.state.birth, registerAction: {
+                        viewModel.onTriggerEvent(.register)
                     }, backToLoginAction: {
-                        viewModel.onChangeMode()
+                        viewModel.onTriggerEvent(.changeLoginMode)
                     })
                 } else {
-                    LoginContentView(username: $viewModel.username, password: $viewModel.password, loginAction: {
-                        viewModel.onLogin()
+                    LoginContentView(username: $viewModel.state.username, password: $viewModel.state.password, loginAction: {
+                        viewModel.onTriggerEvent(.login)
                     }, goToRegisterAction: {
-                        viewModel.onChangeMode()
+                        viewModel.onTriggerEvent(.changeLoginMode)
                     })
                 }
             }
-            .navigationBarTitle(viewModel.isRegisterScreen ? R.string.textFile.register() : R.string.textFile.login(), displayMode: .inline)
+            .onChange(of: viewModel.state.loadingState, {
+                
+            })
+            .navigationBarTitle(viewModel.state.isRegisterScreen ? R.string.textFile.register() : R.string.textFile.login(), displayMode: .inline)
             .onTapGesture {
                 hideKeyboard()
-            }
-            .alert(isPresented: $viewModel.isShowingError) {
-                Alert(
-                    title: Text("Error"),
-                    message: Text("Unknown error"),
-                    dismissButton: .default(Text("OK")) {
-                    }
-                )
             }
         }
     }
@@ -68,15 +62,13 @@ struct LoginContentView: View {
         VStack {
             ExtraLargeSpacer()
             LoginInputField(
-                label: R.string.textFile.name(),
-                value: $username,
+                value: $username, label: R.string.textFile.name(),
                 placeholder: R.string.textFile.placeHolder(),
                 helperText: R.string.textFile.description()
             )
             ExtraLargeSpacer()
             LoginInputField(
-                label: R.string.textFile.password(),
-                value: $password,
+                value: $password, label: R.string.textFile.password(),
                 placeholder: R.string.textFile.placeHolder(),
                 helperText: R.string.textFile.description()
             )
@@ -106,22 +98,19 @@ struct RegisterContentView: View {
         VStack {
             ExtraLargeSpacer()
             LoginInputField(
-                label: R.string.textFile.name(),
-                value: $username,
+                value: $username, label: R.string.textFile.name(),
                 placeholder: R.string.textFile.placeHolder(),
                 helperText: R.string.textFile.description()
             )
             ExtraLargeSpacer()
             LoginInputField(
-                label: R.string.textFile.password(),
-                value: $password,
+                value: $password, label: R.string.textFile.password(),
                 placeholder: R.string.textFile.placeHolder(),
                 helperText: R.string.textFile.description()
             )
             ExtraLargeSpacer()
             LoginInputField(
-                label: R.string.textFile.name(),
-                value: $name,
+                value: $name, label: R.string.textFile.name(),
                 placeholder: R.string.textFile.placeHolder(),
                 helperText: R.string.textFile.description()
             )

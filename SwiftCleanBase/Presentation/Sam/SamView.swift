@@ -9,17 +9,14 @@ import Foundation
 import SwiftUI
 
 struct SamView: View {
-    @State private var listCourse: [CourseDto] = []
-    @State private var listStudent: [StudentDto] = []
-    @State private var listStudentByCode: [StudentDto] = []
+    @StateObject var viewModel: SamViewModel = .init()
 
-    @State private var isCourseScreen = false
-    
     var body: some View {
         NavigationView {
             VStack {
-                if isCourseScreen {
-                    CourseListView(courses: listCourse) { id in
+                if viewModel.state.isCourseScreen {
+                    CourseListView(courses: viewModel.state.listCourse) { id in
+                        viewModel.onTriggerEvent(.selectCourse(id))
                     }
                 } else {
                     Spacer(minLength: 30)
@@ -27,7 +24,8 @@ struct SamView: View {
                         Text("Total Students")
                             .font(.title)
                         Spacer(minLength: 20)
-                        StudentListView(isRegistered: false, students: listStudent) { id in
+                        StudentListView(isRegistered: false, students: viewModel.state.listStudent) { id in
+                            viewModel.onTriggerEvent(.registerStudent(id))
                         }
                     }
                     Spacer(minLength: 30)
@@ -35,23 +33,25 @@ struct SamView: View {
                         Text("Enrolled Students")
                             .font(.title)
                         Spacer(minLength: 20)
-                        StudentListView(isRegistered: true, students: listStudentByCode) { id in
+                        StudentListView(isRegistered: true, students: viewModel.state.listStudentByCode) { id in
+                            viewModel.onTriggerEvent(.removeStudent(id))
                         }
                     }
                 }
             }
-            .padding(.horizontal, 24)
-            .navigationTitle(isCourseScreen ? "Courses" : "Students")
+            .navigationTitle(viewModel.state.isCourseScreen ? "Courses" : "Students")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
+                        viewModel.onTriggerEvent(.back)
                     }) {
                         Image(systemName: "chevron.left")
                     }
                 }
             }
             .onAppear {
+                viewModel.onTriggerEvent(.initData)
             }
         }
     }

@@ -12,7 +12,7 @@ class GetStudentsUseCase {
     
     @Injected private var studentRepository: StudentRepository
     
-    func callAsFunction(courseId: String) -> [StudentDto]? {
+    func callAsFunction() -> [StudentDto]? {
         studentRepository.getListStudent()?.map { entity in
             entity.toStudentDto()
         }
