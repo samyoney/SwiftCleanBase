@@ -8,6 +8,6 @@
 import Foundation
 
 
-struct Nothing: Codable {
+struct Nothing: Codable, Equatable {
 }
 

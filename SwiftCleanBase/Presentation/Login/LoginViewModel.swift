@@ -8,8 +8,7 @@
 import Foundation
 import Resolver
 
-@MainActor
-class LoginViewModel: ObservableObject {
+class LoginViewModel: ViewModel {
     @Injected private var fetchRegisterUseCase: FetchRegisterUseCase
     @Injected private var fetchLoginUseCase: FetchLoginUseCase
     @Injected private var fetchStudentsUseCase: FetchStudentsUseCase

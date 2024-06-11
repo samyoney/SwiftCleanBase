@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginState {
+struct LoginState: Equatable {
     var username: String = String()
     var password: String = String()
     var name: String = String()

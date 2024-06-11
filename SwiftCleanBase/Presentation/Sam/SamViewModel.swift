@@ -9,7 +9,7 @@ import Foundation
 import Resolver
 
 @MainActor
-class SamViewModel: ObservableObject {
+class SamViewModel: ViewModel {
     @Injected private var getCoursesUseCase: GetCoursesUseCase
     @Injected private var getStudentsUseCase: GetStudentsUseCase
     @Injected private var getStudentsByCourseIdUseCase: GetStudentsByCourseIdUseCase

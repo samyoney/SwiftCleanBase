@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 struct SamView: View {
+    @EnvironmentObject var router: AppRouter
+    
     @StateObject var viewModel: SamViewModel = .init()
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -21,7 +23,7 @@ struct SamView: View {
                 } else {
                     Spacer(minLength: 30)
                     VStack {
-                        Text("Total Students")
+                        Text(R.string.textFile.totalStudentsTitle())
                             .font(.title)
                         Spacer(minLength: 20)
                         StudentListView(isRegistered: false, students: viewModel.state.listStudent) { id in
@@ -30,7 +32,7 @@ struct SamView: View {
                     }
                     Spacer(minLength: 30)
                     VStack {
-                        Text("Enrolled Students")
+                        Text(R.string.textFile.enrolledStudent())
                             .font(.title)
                         Spacer(minLength: 20)
                         StudentListView(isRegistered: true, students: viewModel.state.listStudentByCode) { id in
@@ -39,14 +41,20 @@ struct SamView: View {
                     }
                 }
             }
-            .navigationTitle(viewModel.state.isCourseScreen ? "Courses" : "Students")
+            .navigationTitle(viewModel.state.isCourseScreen ? R.string.textFile.courseNavTab() : R.string.textFile.studentNavTab())
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Color(R.color.statusBarColor), for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .navigationBarBackButtonHidden(true)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        viewModel.onTriggerEvent(.back)
-                    }) {
-                        Image(systemName: "chevron.left")
+                ToolbarItem(placement: .topBarLeading) {
+                    if !viewModel.state.isCourseScreen {
+                        Button {
+                            viewModel.onTriggerEvent(.back)
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor(Color(R.color.headerPinkColor))
+                        }
                     }
                 }
             }

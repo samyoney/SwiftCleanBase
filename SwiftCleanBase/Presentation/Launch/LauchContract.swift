@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LanchState {
+struct LanchState: Equatable {
     var isNextToSam: Bool = false
 }
 
