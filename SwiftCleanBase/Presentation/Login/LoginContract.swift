@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginState {
+struct LoginState: Equatable {
     var username: String = String()
     var password: String = String()
     var name: String = String()
@@ -17,10 +17,6 @@ struct LoginState {
 }
 
 enum LoginEvent {
-    case inputUsername(text: String)
-    case inputPassword(text: String)
-    case inputName(text: String)
-    case inputBirth(year: Int, month: Int)
     case changeLoginMode
     case register
     case login

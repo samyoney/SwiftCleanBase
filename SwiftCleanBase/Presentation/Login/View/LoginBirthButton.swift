@@ -31,7 +31,7 @@ struct LoginBirthButton: View {
             }
             .sheet(isPresented: $showingPicker) {
                 YearMonthPickerView(onYearMonthSelected: { year, month in
-                    birth = "\(year)-\(String(format: "%02d", month))"
+                    birth = "\(year)/\(String(format: "%02d", month))"
                     onYearMonthSelected(year, month)
                     showingPicker = false
                 })
@@ -66,12 +66,13 @@ struct YearMonthPickerView: View {
             HStack {
                 Button(R.string.textFile.cancel()) {
                     presentationMode.wrappedValue.dismiss()
-                }
+                }.foregroundColor(.orangeBg)
+
                 Spacer()
                 Button(R.string.textFile.ok()) {
                     onYearMonthSelected(selectedYear, selectedMonth)
                     presentationMode.wrappedValue.dismiss()
-                }
+                }.foregroundColor(.orangeBg)
             }
             .padding()
         }

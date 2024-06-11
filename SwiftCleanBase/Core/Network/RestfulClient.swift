@@ -100,7 +100,6 @@ class RestfulClient  {
                 let result = try JSONDecoder().decode(T.self, from: data)
                 return result
             } catch {
-                try JSONDecoder().decode(CourseResponse.self, from: data)
                 throw RestfulError.dataError(error)
             }
         }

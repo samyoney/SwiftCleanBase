@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SamState {
+struct SamState: Equatable {
     var listCourse: [CourseDto] = []
     var listStudent: [StudentDto] = []
     var listStudentByCode: [StudentDto] = []

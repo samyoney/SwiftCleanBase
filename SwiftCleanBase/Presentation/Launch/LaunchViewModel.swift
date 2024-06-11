@@ -8,8 +8,7 @@
 import Foundation
 import Resolver
 
-@MainActor
-class LaunchViewModel: ObservableObject {
+class LaunchViewModel: ViewModel {
     @Injected private var fetchAutoLoginUseCase: FetchAutoLoginUseCase
     @Injected private var fetchCoursesUseCase: FetchCoursesUseCase
     @Injected private var saveCoursesUseCase: SaveCoursesUseCase
@@ -38,12 +37,11 @@ class LaunchViewModel: ObservableObject {
         fetchCoursesUseCase({err in
             self.handleError(err.message)
         }, { res in
-            
             if (res.status == 0) {
                 self.saveCourses(res)
                 self.login()
             } else {
-                self.handleError(R.string.textFile.errorApiMessage())
+                self.handleError(res.message)
             }
         })
     }

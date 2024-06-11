@@ -22,6 +22,17 @@
 		DE3767102C16A0C000861D38 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */; };
 		DE3767142C16A82800861D38 /* SamContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767132C16A82800861D38 /* SamContract.swift */; };
 		DE3767162C16A83400861D38 /* SamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767152C16A83400861D38 /* SamViewModel.swift */; };
+		DE37671A2C17DF1300861D38 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767192C17DF1300861D38 /* AppRouter.swift */; };
+		DE37671D2C17E0DA00861D38 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37671C2C17E0DA00861D38 /* AppView.swift */; };
+		DE3767212C17F86C00861D38 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767202C17F86C00861D38 /* ViewModel.swift */; };
+		DE3767242C17F92500861D38 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767232C17F92500861D38 /* ProgressIndicator.swift */; };
+		DE37672B2C181D5600861D38 /* Loading+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37672A2C181D5600861D38 /* Loading+Extension.swift */; };
+		DE37672F2C1827C600861D38 /* ErrorDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37672E2C1827C600861D38 /* ErrorDialog.swift */; };
+		DE3767382C192F2D00861D38 /* VideoAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767352C192F2D00861D38 /* VideoAsyncImage.swift */; };
+		DE3767392C192F2D00861D38 /* AvatarAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767362C192F2D00861D38 /* AvatarAsyncImage.swift */; };
+		DE37673A2C192F2D00861D38 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767372C192F2D00861D38 /* CacheAsyncImage.swift */; };
+		DE37673C2C19305A00861D38 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37673B2C19305A00861D38 /* ImageCache.swift */; };
+		DE3767412C19330700861D38 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3767402C19330700861D38 /* KeychainManager.swift */; };
 		DE646BC92C06FB48005533D0 /* SwiftCleanBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */; };
 		DE646BCB2C06FB48005533D0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE646BCA2C06FB48005533D0 /* LoginView.swift */; };
 		DE646BCD2C06FB6E005533D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE646BCC2C06FB6E005533D0 /* Assets.xcassets */; };
@@ -114,6 +125,17 @@
 		DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		DE3767132C16A82800861D38 /* SamContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamContract.swift; sourceTree = "<group>"; };
 		DE3767152C16A83400861D38 /* SamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamViewModel.swift; sourceTree = "<group>"; };
+		DE3767192C17DF1300861D38 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		DE37671C2C17E0DA00861D38 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		DE3767202C17F86C00861D38 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DE3767232C17F92500861D38 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		DE37672A2C181D5600861D38 /* Loading+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loading+Extension.swift"; sourceTree = "<group>"; };
+		DE37672E2C1827C600861D38 /* ErrorDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialog.swift; sourceTree = "<group>"; };
+		DE3767352C192F2D00861D38 /* VideoAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAsyncImage.swift; sourceTree = "<group>"; };
+		DE3767362C192F2D00861D38 /* AvatarAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarAsyncImage.swift; sourceTree = "<group>"; };
+		DE3767372C192F2D00861D38 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		DE37673B2C19305A00861D38 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		DE3767402C19330700861D38 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		DE646BC52C06FB48005533D0 /* SwiftCleanBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCleanBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCleanBaseApp.swift; sourceTree = "<group>"; };
 		DE646BCA2C06FB48005533D0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -205,8 +227,10 @@
 		4405010B2C0AC1DF00F4616C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				DEDA66342C0EE81A003FEF76 /* Component */,
+				DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */,
 				4405010C2C0AC1EE00F4616C /* AppModule.swift */,
+				DE3767192C17DF1300861D38 /* AppRouter.swift */,
+				DE37671C2C17E0DA00861D38 /* AppView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -272,6 +296,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DE3767342C192F2400861D38 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				DE3767362C192F2D00861D38 /* AvatarAsyncImage.swift */,
+				DE3767372C192F2D00861D38 /* CacheAsyncImage.swift */,
+				DE3767352C192F2D00861D38 /* VideoAsyncImage.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		DE646BBC2C06FB48005533D0 = {
 			isa = PBXGroup;
 			children = (
@@ -298,10 +332,9 @@
 				DEDA66252C0EBF2D003FEF76 /* Info.plist */,
 				4405010B2C0AC1DF00F4616C /* App */,
 				DEEE5D332C086BD800A015BE /* Core */,
+				DEDFB5EF2C0711C00063E752 /* Presentation */,
 				DEDFB5F42C07164C0063E752 /* Resources */,
 				DEDFB5EE2C0711B50063E752 /* Data */,
-				DEDFB5EF2C0711C00063E752 /* Presentation */,
-				DE646BC82C06FB48005533D0 /* SwiftCleanBaseApp.swift */,
 				DE646BCC2C06FB6E005533D0 /* Assets.xcassets */,
 				DE646BCE2C06FB6E005533D0 /* Preview Content */,
 			);
@@ -405,7 +438,10 @@
 		DEDA66342C0EE81A003FEF76 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				DE3767342C192F2400861D38 /* Media */,
 				DEDA66352C0EE82C003FEF76 /* Spacer.swift */,
+				DE3767232C17F92500861D38 /* ProgressIndicator.swift */,
+				DE37672E2C1827C600861D38 /* ErrorDialog.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -443,6 +479,7 @@
 		DEDA66442C0F19EB003FEF76 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				DE37672A2C181D5600861D38 /* Loading+Extension.swift */,
 				DEDA66462C0F19F3003FEF76 /* LoadingState.swift */,
 			);
 			path = State;
@@ -452,6 +489,8 @@
 			isa = PBXGroup;
 			children = (
 				DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */,
+				DE37673B2C19305A00861D38 /* ImageCache.swift */,
+				DE3767402C19330700861D38 /* KeychainManager.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -471,9 +510,9 @@
 		DEDFB5EF2C0711C00063E752 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DEDA66392C0EEB51003FEF76 /* Sam */,
-				DEDA662A2C0EE504003FEF76 /* Login */,
 				DEDA66272C0EBFF3003FEF76 /* Launch */,
+				DEDA662A2C0EE504003FEF76 /* Login */,
+				DEDA66392C0EEB51003FEF76 /* Sam */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -527,6 +566,8 @@
 		DEEE5D332C086BD800A015BE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DE3767202C17F86C00861D38 /* ViewModel.swift */,
+				DEDA66342C0EE81A003FEF76 /* Component */,
 				DE3767092C168EB800861D38 /* Model */,
 				DEDA664A2C102D2C003FEF76 /* Cache */,
 				DEDA66442C0F19EB003FEF76 /* State */,
@@ -695,10 +736,12 @@
 				DEDA66062C0EB1A1003FEF76 /* CheckLoggedInUseCase.swift in Sources */,
 				DE646BCB2C06FB48005533D0 /* LoginView.swift in Sources */,
 				DEDA66292C0EBFFF003FEF76 /* LaunchView.swift in Sources */,
+				DE3767242C17F92500861D38 /* ProgressIndicator.swift in Sources */,
 				440501672C0AFC3900F4616C /* RegisterResponse.swift in Sources */,
 				DEDA662D2C0EE50F003FEF76 /* LoginBirthButton.swift in Sources */,
 				4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */,
 				4405010D2C0AC1EE00F4616C /* AppModule.swift in Sources */,
+				DE37671D2C17E0DA00861D38 /* AppView.swift in Sources */,
 				DEDA66422C0F11A0003FEF76 /* LoginViewModel.swift in Sources */,
 				DEDA661D2C0EBB34003FEF76 /* GetStudentsUseCase.swift in Sources */,
 				DEDA661B2C0EB972003FEF76 /* GetStudentsByCourseIdUseCase.swift in Sources */,
@@ -709,10 +752,13 @@
 				4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */,
 				DEDFB6042C0816FB0063E752 /* StudentEntity.swift in Sources */,
 				DEDA660F2C0EB40E003FEF76 /* AddStudentIntoCourseUseCase.swift in Sources */,
+				DE3767412C19330700861D38 /* KeychainManager.swift in Sources */,
 				DEDA66152C0EB7F3003FEF76 /* FetchStudentsUseCase.swift in Sources */,
 				DEDA66402C0EECED003FEF76 /* SamView.swift in Sources */,
 				DEDA66032C0DB50E003FEF76 /* FetchLoginUseCase.swift in Sources */,
 				DEDA66472C0F19F3003FEF76 /* LoadingState.swift in Sources */,
+				DE37673C2C19305A00861D38 /* ImageCache.swift in Sources */,
+				DE37672F2C1827C600861D38 /* ErrorDialog.swift in Sources */,
 				DE3767162C16A83400861D38 /* SamViewModel.swift in Sources */,
 				440501642C0AFC3900F4616C /* CourseResponse.swift in Sources */,
 				DE3767102C16A0C000861D38 /* LaunchViewModel.swift in Sources */,
@@ -724,12 +770,14 @@
 				DEDA66492C0F1ADB003FEF76 /* LoginContract.swift in Sources */,
 				DE37670B2C168EC500861D38 /* Nothing.swift in Sources */,
 				DEDA660C2C0EB362003FEF76 /* SaveAccountInfoUseCase.swift in Sources */,
+				DE37671A2C17DF1300861D38 /* AppRouter.swift in Sources */,
 				DE3767142C16A82800861D38 /* SamContract.swift in Sources */,
 				DEDA661F2C0EBBA4003FEF76 /* RemoveStudentFromCourseUseCase.swift in Sources */,
 				DEDA66362C0EE82C003FEF76 /* Spacer.swift in Sources */,
 				DEDFB6172C0847660063E752 /* RestfulClient.swift in Sources */,
 				440501632C0AFC3900F4616C /* BaseResponse.swift in Sources */,
 				DEDFB6022C0811870063E752 /* CourseEntity.swift in Sources */,
+				DE3767392C192F2D00861D38 /* AvatarAsyncImage.swift in Sources */,
 				DEDA663C2C0EEB8B003FEF76 /* CourseListView.swift in Sources */,
 				DED158A72C0D95D60090FE66 /* CourseService.swift in Sources */,
 				DEDFB60B2C0821CC0063E752 /* StudentDto.swift in Sources */,
@@ -744,12 +792,16 @@
 				440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */,
 				DEDA66082C0EB26D003FEF76 /* FetchAutoLoginUseCase.swift in Sources */,
 				DEDA662F2C0EE68C003FEF76 /* LoginButton.swift in Sources */,
+				DE3767212C17F86C00861D38 /* ViewModel.swift in Sources */,
+				DE3767382C192F2D00861D38 /* VideoAsyncImage.swift in Sources */,
 				DEDFB6192C08479B0063E752 /* RestfulError.swift in Sources */,
 				440501612C0AFC3900F4616C /* LoginRequest.swift in Sources */,
+				DE37673A2C192F2D00861D38 /* CacheAsyncImage.swift in Sources */,
 				DEDA66212C0EBC13003FEF76 /* SaveCoursesUseCase.swift in Sources */,
 				DEDA660A2C0EB2D8003FEF76 /* FetchRegisterUseCase.swift in Sources */,
 				DEDA66112C0EB600003FEF76 /* CheckDataInitializedUseCase.swift in Sources */,
 				DED158AD2C0D96900090FE66 /* CourseRepository.swift in Sources */,
+				DE37672B2C181D5600861D38 /* Loading+Extension.swift in Sources */,
 				DEDA66332C0EE7BE003FEF76 /* LoginInputField.swift in Sources */,
 				DEDA66232C0EBCDE003FEF76 /* SaveStudentsUseCase.swift in Sources */,
 				DED158A32C0D902B0090FE66 /* RestfulFlow.swift in Sources */,

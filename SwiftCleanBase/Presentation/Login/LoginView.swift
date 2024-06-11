@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var appRouter: AppRouter
     
     @StateObject var viewModel: LoginViewModel = .init()
-
+    
     @Environment(\.dismiss) private var dismiss
     
     @FocusState private var focusedField: Field?
-
+    
     enum Field: Hashable {
         case username, password, name
     }
@@ -35,13 +36,24 @@ struct LoginView: View {
                         viewModel.onTriggerEvent(.changeLoginMode)
                     })
                 }
+            }.onChange(of: viewModel.state.loadingState == .loaded()) {
+                appRouter.navigateTo(.sam)
             }
-            .onChange(of: viewModel.state.loadingState, {
-                
-            })
-            .navigationBarTitle(viewModel.state.isRegisterScreen ? R.string.textFile.register() : R.string.textFile.login(), displayMode: .inline)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(Color(R.color.statusBarColor), for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(viewModel.state.isRegisterScreen ? R.string.textFile.registerNavTab() : R.string.textFile.loginNavTab())
+                        .font(.system(size: 24, weight: .bold))
+                        .foregroundColor(Color(R.color.orangeBgColor))
+                }
+            }
             .onTapGesture {
                 hideKeyboard()
+            }
+            .observeLoadingState($viewModel.state.loadingState) { _ in
+                appRouter.setRootview(route: .sam)
             }
         }
     }
@@ -57,7 +69,7 @@ struct LoginContentView: View {
     
     var loginAction: () -> Void
     var goToRegisterAction: () -> Void
-
+    
     var body: some View {
         VStack {
             ExtraLargeSpacer()
@@ -93,7 +105,7 @@ struct RegisterContentView: View {
     
     var registerAction: () -> Void
     var backToLoginAction: () -> Void
-
+    
     var body: some View {
         VStack {
             ExtraLargeSpacer()

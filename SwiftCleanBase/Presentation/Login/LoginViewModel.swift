@@ -8,8 +8,7 @@
 import Foundation
 import Resolver
 
-@MainActor
-class LoginViewModel: ObservableObject {
+class LoginViewModel: ViewModel {
     @Injected private var fetchRegisterUseCase: FetchRegisterUseCase
     @Injected private var fetchLoginUseCase: FetchLoginUseCase
     @Injected private var fetchStudentsUseCase: FetchStudentsUseCase
@@ -20,14 +19,6 @@ class LoginViewModel: ObservableObject {
     
     func onTriggerEvent(_ eventType: LoginEvent) {
         switch eventType {
-        case .inputUsername(let text):
-            onInputUsername(text)
-        case .inputPassword(let text):
-            onInputPassword(text)
-        case .inputName(let text):
-            onInputName(text)
-        case .inputBirth(let year, let month):
-            onInputBirth(year, month)
         case .register:
             onRegister()
         case .login:
@@ -54,7 +45,7 @@ class LoginViewModel: ObservableObject {
             if (res.status == 0) {
                 self.handleAfterLogin(self.state.username, self.state.password)
             } else {
-                self.handleError(R.string.textFile.errorApiMessage())
+                self.handleError(res.message)
             }
         })
     }
@@ -82,11 +73,11 @@ class LoginViewModel: ObservableObject {
             self.handleError(err.message)
         }, {
             res in
-                if (res.status == 0) {
-                    self.handleAfterLogin(self.state.username, self.state.password)
-                } else {
-                    self.handleError(R.string.textFile.errorApiMessage())
-                }
+            if (res.status == 0) {
+                self.handleAfterLogin(self.state.username, self.state.password)
+            } else {
+                self.handleError(res.message)
+            }
         })
     }
     
@@ -96,7 +87,7 @@ class LoginViewModel: ObservableObject {
             if (res.status == 0) {
                 onFinish(res)
             } else {
-                self.handleError(R.string.textFile.errorApiMessage())
+                self.handleError(res.message)
             }
         })
     }
@@ -109,29 +100,14 @@ class LoginViewModel: ObservableObject {
         saveStudentsUseCase(students: res.students)
     }
     
-    private func onInputBirth(_ year: Int, _ month: Int) {
-        state.birth = "\(year)/\(month)"
-    }
-    
-    private func onInputName(_ text: String) {
-        state.username = text
-    }
-    
-    private func onInputPassword(_ text: String) {
-        if (text.isEmpty || (text.range(of: "^[A-Z0-9a-z]+$", options: .regularExpression) != nil) && text.count <= 16) {
-            state.password = text.uppercased(with: Locale(identifier: "en_US"))
-        }
-    }
-    
-    private func onInputUsername(_ text: String) {
-        if (text.isEmpty || (text.range(of: "^[A-Z0-9a-z]+$", options: .regularExpression) != nil) && text.count <= 16) {
-            state.username = text.uppercased(with: Locale(identifier: "en_US"))
-        }
+    private func isValid(_ text: String?) -> Bool {
+        guard let text = text else { return false }
+        return !text.isEmpty && text.range(of: "^[A-Z0-9a-z]+$", options: .regularExpression) != nil && text.count <= 16
     }
     
     private func checkValidation(_ username: String? = nil, _ password: String? = nil, _ birthday: String? = nil) -> Bool {
-        let isUsernameValid = username != nil
-        let isPasswordValid = password != nil
+        let isUsernameValid = isValid(username)
+        let isPasswordValid = isValid(password)
         let isBirthdayValid = birthday == nil || !birthday!.isEmpty
         return isUsernameValid && isPasswordValid && isBirthdayValid
     }

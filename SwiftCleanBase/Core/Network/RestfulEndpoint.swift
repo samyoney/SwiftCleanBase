@@ -24,16 +24,11 @@ protocol Endpoint {
     func body() throws -> Data?
 }
 
-enum Method {
-    case post
-    case get
-    
-    var rawString: String  {
-        switch self {
-        case .post: return "POST"
-        default: return "GET"
-        }
-    }
+enum Method: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
 }
 
 enum RestfulEndpoint: Endpoint {
@@ -42,7 +37,7 @@ enum RestfulEndpoint: Endpoint {
     }
     
     var method: String {
-        _method.rawString
+        _method.rawValue
     }
     
     var headers: [String : String]? {

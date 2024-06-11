@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SwiftCleanBaseApp: App {
+    @StateObject private var router: AppRouter = AppRouter()
+    
     var body: some Scene {
         WindowGroup {
-            LaunchView()
+            AppView(router: router) {
+                router.getRootview()
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StudentDto: Identifiable, Codable {
+struct StudentDto: Identifiable, Codable, Equatable {
     let id: String?
     let birth: String?
     let course: CourseDto?
