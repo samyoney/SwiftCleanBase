@@ -30,6 +30,7 @@ struct ProgressIndicatorModifier: ViewModifier {
             content
             if isPresented {
                 ZStack {
+                    Color.black.opacity(0.6)
                     Spacer()
                     ProgressIndicatorView(isPresented: $isPresented)
                         .transition(.move(edge: .bottom).combined(with: .opacity))

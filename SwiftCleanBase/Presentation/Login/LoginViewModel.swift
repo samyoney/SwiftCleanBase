@@ -39,6 +39,7 @@ class LoginViewModel: ViewModel {
             handleError(R.string.textFile.validationFailText())
             return
         }
+        onShowLoading()
         fetchLoginUseCase(username: state.username, password: state.password, { error in
             self.handleError(error.message)
         }, { res in
@@ -48,6 +49,10 @@ class LoginViewModel: ViewModel {
                 self.handleError(res.message)
             }
         })
+    }
+    
+    private func onShowLoading() {
+        state.loadingState = .loading
     }
     
     private func handleAfterLogin(_ username: String, _ password: String) {

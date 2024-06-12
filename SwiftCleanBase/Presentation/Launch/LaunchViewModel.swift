@@ -60,6 +60,8 @@ class LaunchViewModel: ViewModel {
             }, { res in
                 if (res.status == 0) {
                     self.onNextScreen(isNextToSam: true)
+                } else {
+                    self.handleError(res.message)
                 }
             })
         } else {
