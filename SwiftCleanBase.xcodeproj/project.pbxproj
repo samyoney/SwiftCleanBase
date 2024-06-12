@@ -17,6 +17,7 @@
 		440501682C0AFC3900F4616C /* StudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405015F2C0AFC3900F4616C /* StudentResponse.swift */; };
 		4405016B2C0AFCA100F4616C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016A2C0AFCA100F4616C /* LoginService.swift */; };
 		4405016D2C0C4E8D00F4616C /* Resful+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */; };
+		DE37620A2C198CF00014AFC7 /* DataBridgeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3762092C198CF00014AFC7 /* DataBridgeManager.swift */; };
 		DE37670B2C168EC500861D38 /* Nothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670A2C168EC500861D38 /* Nothing.swift */; };
 		DE37670D2C1698A600861D38 /* LauchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670C2C1698A600861D38 /* LauchContract.swift */; };
 		DE3767102C16A0C000861D38 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */; };
@@ -120,6 +121,7 @@
 		4405015F2C0AFC3900F4616C /* StudentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentResponse.swift; sourceTree = "<group>"; };
 		4405016A2C0AFCA100F4616C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		4405016C2C0C4E8D00F4616C /* Resful+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resful+Extension.swift"; sourceTree = "<group>"; };
+		DE3762092C198CF00014AFC7 /* DataBridgeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBridgeManager.swift; sourceTree = "<group>"; };
 		DE37670A2C168EC500861D38 /* Nothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nothing.swift; sourceTree = "<group>"; };
 		DE37670C2C1698A600861D38 /* LauchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchContract.swift; sourceTree = "<group>"; };
 		DE37670F2C16A0C000861D38 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -287,6 +289,14 @@
 			name = Remote;
 			path = SwiftCleanBase/Data/Remote;
 			sourceTree = SOURCE_ROOT;
+		};
+		DE3762072C198C130014AFC7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
 		};
 		DE3767092C168EB800861D38 /* Model */ = {
 			isa = PBXGroup;
@@ -488,9 +498,9 @@
 		DEDA664A2C102D2C003FEF76 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				DEDFB6112C0842E30063E752 /* UserDefaultManager.swift */,
 				DE37673B2C19305A00861D38 /* ImageCache.swift */,
 				DE3767402C19330700861D38 /* KeychainManager.swift */,
+				DE3762092C198CF00014AFC7 /* DataBridgeManager.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -567,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				DE3767202C17F86C00861D38 /* ViewModel.swift */,
+				DE3762072C198C130014AFC7 /* Store */,
 				DEDA66342C0EE81A003FEF76 /* Component */,
 				DE3767092C168EB800861D38 /* Model */,
 				DEDA664A2C102D2C003FEF76 /* Cache */,
@@ -756,6 +767,7 @@
 				DEDA66152C0EB7F3003FEF76 /* FetchStudentsUseCase.swift in Sources */,
 				DEDA66402C0EECED003FEF76 /* SamView.swift in Sources */,
 				DEDA66032C0DB50E003FEF76 /* FetchLoginUseCase.swift in Sources */,
+				DE37620A2C198CF00014AFC7 /* DataBridgeManager.swift in Sources */,
 				DEDA66472C0F19F3003FEF76 /* LoadingState.swift in Sources */,
 				DE37673C2C19305A00861D38 /* ImageCache.swift in Sources */,
 				DE37672F2C1827C600861D38 /* ErrorDialog.swift in Sources */,
